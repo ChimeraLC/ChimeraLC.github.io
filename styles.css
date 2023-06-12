@@ -9,24 +9,50 @@
     background-color:rgb(121, 121, 255);
     left: 0;
     top: 0;
+    z-index: 2;
 }
 .mainTitle {
     position: absolute;
     font-size: 10px;
     margin: 0; padding: -200px;
-    padding-top: 30%;
-    left: 30%;
-    top: 0;
+    left: 25%;
+    top: 40%;
+}
+.mainTitle a {
+    text-decoration: none;
+    color:#111;
+}
+.mainTitle a:hover {
+    opacity: 0.7;
 }
 .mainImage { 
     position: absolute;
+    text-align: center;
+    margin: 0;
     left: 70%;
-    padding-top: 30%;
+    top: 40%;
 }
 .mainImage img {
     width: 100px;
-    text-align: center;
 }
+/* Sticky text underneath the cover*/
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    /* To be below the cover */
+    margin-left: 160px;
+    height: 100vh;
+    bottom: 0;
+}
+.main {
+    margin-left: 160px;
+}
+/* Div used to have main properly positioned */
+.filler 
+{
+    height: 100vh;
+}
+/* Clickable icons */
 .figure{
     display:inline-block;
     width:40px;
@@ -48,16 +74,49 @@
     top: -0px;
 }
 
-.mainTitle img{
-    border-radius: 50%;
-    width: 80px;
-    position: relative;
-    bottom: -20px;
+/* Top navigation bar */
+.topnav {
+    background-color: #878787;
+    overflow: hidden;
+  }
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
+/* Side navigation bar */
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
 
 .underText {
     position: fixed
 }
+
+
+
+
+
 
   /* On screens that are less than 700px wide, make the sidebar into a topbar */
   @media screen and (max-width: 500px) {
@@ -65,11 +124,18 @@
         left: 0%;
         width: 100vw;
         max-width: 100%;
-        top: 20%;
+        top: 45%;
         text-align: center;
     }
+    .mainTitle p {
+        margin-left: 0px;
+    }
     .mainImage {
-        left: 40%
+        left: 0%;
+        width: 100vw;
+        max-width: 100%;
+        top: 25%;
+        text-align: center;
     }
     
   }

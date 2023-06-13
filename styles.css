@@ -6,7 +6,7 @@
     width: 100vw;
     max-width: 100%;
     height: 100%; 
-    background-color:rgb(121, 121, 255);
+    background-color:#170a18;
     left: 0;
     top: 0;
     z-index: 2;
@@ -15,12 +15,23 @@
     position: absolute;
     font-size: 10px;
     margin: 0; padding: -200px;
-    left: 25%;
-    top: 40%;
+    left: 50%;
+    margin-left: -350px;
+    top: 35%;
+    color:#ffffff;
+}
+.mainScroll {
+    position: absolute;
+    font-size: 10px;
+    width: 100vw;
+    max-width: 100%;
+    text-align: center;
+    color:#ffffff34;
+    bottom: 3%;
 }
 .mainTitle a {
     text-decoration: none;
-    color:#111;
+    color:#ffffff;
 }
 .mainTitle a:hover {
     opacity: 0.7;
@@ -29,11 +40,12 @@
     position: absolute;
     text-align: center;
     margin: 0;
-    left: 70%;
-    top: 40%;
+    left: 60%;
+    top: 30%;
 }
 .mainImage img {
-    width: 100px;
+    border-radius: 50%;
+    width: 250px;
 }
 /* Sticky text underneath the cover*/
 .sticky {
@@ -43,9 +55,6 @@
     margin-left: 160px;
     height: 100vh;
     bottom: 0;
-}
-.main {
-    margin-left: 160px;
 }
 /* Div used to have main properly positioned */
 .filler 
@@ -60,7 +69,7 @@
     border-radius: 20px;
     font-size: 25px;
     text-align: center;
-    background-color: #0033ff;
+    background-color: #474747;
     line-height: 1.7em;
     text-decoration: none;
 }
@@ -76,17 +85,22 @@
 
 /* Top navigation bar */
 .topnav {
-    background-color: #878787;
+    background-image: linear-gradient(#000000, rgba(255, 255, 0, 0));
     overflow: hidden;
+    width: 100%;
+    height: 100px
   }
-
 .topnav a {
     float: left;
-    color: #f2f2f2;
+    color: #5d5d5d;
+    
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+}
+.topnav a:hover {
+    color: #ffffff;
 }
 /* Side navigation bar */
 .sidenav {
@@ -96,7 +110,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #060119;
     overflow-x: hidden;
     padding-top: 20px;
   }
@@ -115,17 +129,43 @@
 
 
 
+/* On screens that are less than 500px high, change orientation*/
+@media screen and (max-height: 500px) {
+    .mainCover {
+        height: 500px;
+    }
+    .filler {
+        height: 500px;
+    }
+  }
+
+  /* On screens that are less than 1000px wide, change orientation*/
+  @media screen and (max-width: 800px) {
+    .mainTitle {
+        width: 300px;
+        left: 10%;
+        margin-left: 0px;
+    }
+    .mainImage {
+        top: 35%;
+    }
+    .mainImage img {
+        width: 200px;
+    }
+    
+  }
 
 
-
-  /* On screens that are less than 700px wide, make the sidebar into a topbar */
-  @media screen and (max-width: 500px) {
+  /* On screens that are less than 500px wide, make vertical*/
+    @media screen and (max-width: 600px) {
     .mainTitle {
         left: 0%;
         width: 100vw;
         max-width: 100%;
-        top: 45%;
+        top: 30%;
+        margin-top: 150px;
         text-align: center;
+        margin-left: 0px;
     }
     .mainTitle p {
         margin-left: 0px;
@@ -134,8 +174,30 @@
         left: 0%;
         width: 100vw;
         max-width: 100%;
-        top: 25%;
+        top: 15%;
         text-align: center;
+    }
+    .mainImage img {
+        width: 200px;
+    }
+    .topnav {
+        position: fixed;
+        z-index: 10;
+    }
+    .sidenav {
+        display: none;
+        width: 100%;
+        height: auto;
+      }
+    .sidenav a {
+        float: left;
+        margin-top: -25px;
+    }
+      div.content {
+        margin-left: 0;
+    }
+    .sticky {
+        margin-left: 0;
     }
     
   }

@@ -1,4 +1,7 @@
 
+/*
+* Cover page
+*/
 
 /* Covers a single screen worth of space*/
 .mainCover {
@@ -11,6 +14,7 @@
     top: 0;
     z-index: 2;
 }
+/* Title text */
 .mainTitle {
     position: absolute;
     font-size: 10px;
@@ -20,6 +24,7 @@
     top: 35%;
     color:#ffffff;
 }
+/* Scroll indicator */
 .mainScroll {
     position: absolute;
     font-size: 10px;
@@ -29,6 +34,7 @@
     color:#ffffff34;
     bottom: 3%;
 }
+/* Links within title */
 .mainTitle a {
     text-decoration: none;
     color:#ffffff;
@@ -36,6 +42,8 @@
 .mainTitle a:hover {
     opacity: 0.7;
 }
+
+/* Main image */
 .mainImage { 
     position: absolute;
     text-align: center;
@@ -46,6 +54,26 @@
 .mainImage img {
     border-radius: 50%;
     width: 250px;
+}
+
+/* Top navigation bar */
+.topnav {
+    background-image: linear-gradient(#000000, rgba(255, 255, 0, 0));
+    overflow: hidden;
+    width: 100%;
+    height: 100px
+  }
+.topnav a {
+    float: left;
+    color: #5d5d5d;
+    
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a:hover {
+    color: #ffffff;
 }
 /* Sticky text underneath the cover*/
 .sticky {
@@ -83,25 +111,7 @@
     top: -0px;
 }
 
-/* Top navigation bar */
-.topnav {
-    background-image: linear-gradient(#000000, rgba(255, 255, 0, 0));
-    overflow: hidden;
-    width: 100%;
-    height: 100px
-  }
-.topnav a {
-    float: left;
-    color: #5d5d5d;
-    
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-.topnav a:hover {
-    color: #ffffff;
-}
+
 /* Side navigation bar */
 .sidenav {
     height: 100%;
@@ -123,11 +133,11 @@
     display: block;
   }
 
-.underText {
-    position: fixed
-}
 
-
+/*
+*
+* Size checks
+*/
 
 /* On screens that are less than 500px high, change orientation*/
 @media screen and (max-height: 500px) {

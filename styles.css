@@ -268,7 +268,7 @@ body {
     left: -2px;
     right: 2px;
     bottom: 6px;
-    background-color: #5c3b3b;
+    background-color: #8585852e;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -284,12 +284,12 @@ body {
     -webkit-transition: .4s;
     transition: .4s;
   }
-  .switch input:checked + .slider {
-    background-color: #2196F3;
+  .switch input:checked + .slider:before {
+    background-color: #000000;
   }
   
-  .switch input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+  .switch input:checked + .slider {
+    background-color: #8585852e;
   }
   .switch:hover input:checked + .slider:before {
     -webkit-transform: translateX(13px);

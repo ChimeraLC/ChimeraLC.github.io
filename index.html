@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="styles.css">
-    <style>
-    body {
-      background: #240526;
-    }
-  </style>
 </head>
-<body style = "color:aliceblue">
+<body>
   <div class = "mainCover" id = "about">
     <!-- Navigation bar-->
-    <div class="topnav">
+    <div class="topnav" id = "topnav">
       <a> </a>
       <a href="#about">About</a>
       <a href="#resume">Resume</a>
     </div>
     <!-- Main content-->
     <div class="mainTitle">
-      <p style="font-size:15px; margin-bottom:-5px;">Hi there, my name is</p>
+      <p style="display: inline-block; font-size:15px; margin-bottom:-5px;">Hell</p>
+      <label class="switch">
+      <input type="checkbox" id = "darkmode-toggle">
+      <span class="slider round"></span>
+    </label>
+    <p style="display: inline-block; font-size:15px; margin-bottom:-5px;">there, my name is</p>
       <h1 style="font-size:50px; margin-bottom:-5px;  margin-top:0;"><b>Lucas Chen.</b></h1>
-      <a href = "mailto: lyc1@rice.edu">
+      <a href = "mailto: lyc1@rice.edu" id = "emailLink">
         <h2 style="font-size:15px; margin-top:0;">lyc1@rice.edu</h2>
       </a>
       <p style="font-size:10px; margin-top:-10px; width: 100%">
@@ -65,5 +65,23 @@
     <div class = "main">
     </div>
   </div>
+
+
+  <!-- Script elements-->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var checkbox = document.getElementById("darkmode-toggle");
+
+      checkbox.addEventListener('change', function () {
+        toggleMode();
+      });
+    });
+    function toggleMode() {
+       var element = document.getElementById("about");
+       element.classList.toggle("dark-mode");
+       var element = document.getElementById("topnav");
+       element.classList.toggle("dark-mode");
+    }
+    </script>
 </body>
 </html>

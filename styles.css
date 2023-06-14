@@ -20,7 +20,7 @@ body {
     left: 0;
     top: 0;
     z-index: 2;
-    transition: 0.3s;
+    transition: background-color 0.3s;
 }
 /* Title text */
 .mainTitle {
@@ -30,6 +30,7 @@ body {
     left: 50%;
     margin-left: -350px;
     top: 35%;
+    transition: color 0.3s;
 }
 /* Scroll indicator */
 .mainScroll {
@@ -40,6 +41,7 @@ body {
     text-align: center;
     opacity: 0.5;
     bottom: 3%;
+    transition: color 0.3s;
 }
 /* Links within title */
 .mainTitle a {
@@ -62,22 +64,23 @@ body {
 .mainImage img {
     border-radius: 50%;
     width: 250px;
+    transition: width
 }
 
 /* Top navigation bar */
 .topnav {
-    background-image: linear-gradient(#8888887d, #170a1800);
-    overflow: hidden;
+    background-image: linear-gradient(#4d4d4d7d, #170a1800);
     width: 100%;
     height: 100px;
+    white-space: nowrap;
   }
 .topnav a {
-    float: left;
-    color: #222222;
+    color: #606060;
     text-align: center;
-    padding: 14px 16px;
+    padding-left: 30px;
     text-decoration: none;
     font-size: 20px;
+    transition: 0.2s;
 }
 .topnav a:hover {
     color: #ffffff;
@@ -150,8 +153,6 @@ body {
 .mainCover.dark-mode a {
     color:#001b35;
 }
-.topnav.dark-mode {
-}
 .topnav.dark-mode a {
     color:#677474;
 }
@@ -160,89 +161,10 @@ body {
 }
 
 /*
-* Size checks
-*/
-
-/* On screens that are less than 500px high, change orientation*/
-@media screen and (max-height: 500px) {
-    .mainCover {
-        height: 500px;
-    }
-    .filler {
-        height: 500px;
-    }
-  }
-
-  /* On screens that are less than 1000px wide, change orientation*/
-  @media screen and (max-width: 800px) {
-    .mainTitle {
-        width: 300px;
-        left: 10%;
-        margin-left: 0px;
-    }
-    .mainImage {
-        top: 35%;
-    }
-    .mainImage img {
-        width: 200px;
-    }
-    
-  }
-
-
-  /* On screens that are less than 500px wide, make vertical*/
-    @media screen and (max-width: 600px) {
-    .mainTitle {
-        white-space: nowrap;
-        overflow: hidden;
-        left: 0%;
-        width: 100vw;
-        max-width: 100%;
-        top: 30%;
-        margin-top: 150px;
-        text-align: center;
-        margin-left: 0px;
-    }
-    .mainTitle p {
-        margin-left: 0px;
-    }
-    .mainImage {
-        left: 0%;
-        width: 100vw;
-        max-width: 100%;
-        top: 15%;
-        text-align: center;
-    }
-    .mainImage img {
-        width: 200px;
-    }
-    .topnav {
-        position: fixed;
-        z-index: 10;
-    }
-    .sidenav {
-        display: none;
-        width: 100%;
-        height: auto;
-      }
-    .sidenav a {
-        float: left;
-        margin-top: -25px;
-    }
-      div.content {
-        margin-left: 0;
-    }
-    .sticky {
-        margin-left: 0;
-    }
-    
-  }
-
-/*
 * Temporary slider code
 */
   /* The switch - the box around the slider */
-.switch {
+  .switch {
     position: relative;
     display: inline-block;
     width: 17px;
@@ -253,6 +175,10 @@ body {
 
   .switch:hover {
     width: 30px;
+  }
+
+  .switch:hover + .mainCover{
+    transition: 0.3s;
   }
   /* Hide default HTML checkbox */
   .switch input {
@@ -305,3 +231,87 @@ body {
   .slider.round:before {
     border-radius: 50%;
   }
+
+  
+/*
+* Size checks
+*/
+
+/* On screens that are less than 500px high, change orientation*/
+@media screen and (max-height: 500px) {
+  .mainCover {
+      height: 500px;
+  }
+  .filler {
+      height: 500px;
+  }
+}
+
+/* On screens that are less than 1000px wide, change orientation*/
+@media screen and (max-width: 800px) {
+  .mainTitle {
+      width: 300px;
+      left: 10%;
+      margin-left: 0px;
+  }
+  .mainImage {
+      top: 35%;
+  }
+  .mainImage img {
+      width: 200px;
+  }
+  
+}
+  /* On screens that are less than 500px wide, make vertical*/
+    @media screen and (max-width: 600px) {
+    .mainTitle {
+        white-space: nowrap;
+        overflow: hidden;
+        left: 0%;
+        width: 100vw;
+        max-width: 100%;
+        top: 30%;
+        margin-top: 150px;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .mainTitle p {
+        margin-left: 0px;
+    }
+    .mainImage {
+        left: 0%;
+        width: 100vw;
+        max-width: 100%;
+        top: 15%;
+        text-align: center;
+    }
+    .mainImage img {
+        width: 200px;
+    }
+    .topnav {
+        white-space: nowrap;
+        position: fixed;
+        z-index: 10;
+    }
+    .topnav a {
+      display: inline;
+      overflow: hidden;
+    }
+    .sidenav {
+        display: none;
+        width: 100%;
+        height: auto;
+      }
+    .sidenav a {
+        float: left;
+        margin-top: -25px;
+    }
+      div.content {
+        margin-left: 0;
+    }
+    .sticky {
+        margin-left: 0;
+    }
+    
+  }
+

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleCover.css">
+    <link rel="stylesheet" href="styleUnder.css">
 </head>
 <body>
   <div class = "mainCover" id = "about">
@@ -50,21 +51,30 @@
     </div>
   </div>  
   <!-- Content underneath -->
-  <div class="sidenav">
-    <a class="active" href="#about">About</a>
-    <a href="#resume">Resume</a>
+  <div class="dropdown">
+    <button class="dropdown-button">
+      <h1 style = "margin-top: -5px; margin-bottom: -10px;">-</h1>
+      <span>
+      <a href="#about" style = "margin-top: -10px">About</a>
+      <br>
+      <a href="#resume">Resume</a>
+     </span>
+    </button>
   </div>
 
-  <!-- Cover -->
   <!-- Absolute placements used for jumps -->
   <div id = "resume" style = "position: absolute; top: 100vh;"></div>
   <!-- Following content-->
   <div class = "filler"> </div>
-  <div class = "sticky">
+  <div class = "sticky" id = "under">
     <h1 style = "padding-top: 40px">Under Construction</h1>
     <div class = "main">
     </div>
   </div>
+
+
+
+
 
 
   <!-- Script elements-->
@@ -77,9 +87,7 @@
       });
     });
     function toggleMode() {
-       var element = document.getElementById("about");
-       element.classList.toggle("dark-mode");
-       var element = document.getElementById("topnav");
+       var element = document.body;
        element.classList.toggle("dark-mode");
     }
     </script>

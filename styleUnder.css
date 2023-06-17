@@ -1,15 +1,31 @@
 /*
 * Content underneath the cover
 */
-
+:root {
+  --sidebar-color:#040404;
+  --sidebar-button-color:#3e3148;
+}
+body {
+  background: #141530;
+}
 body.dark-mode {
     background-color: #D7C0AE;
 }
-body.dark-mode .sidenav {
-    background-color: #967E76;
+body.dark-mode + :root {
+  --sidebar-button-color:#e3e8ec;
+
 }
-body.dark-mode .dropdown-button {
-    background-color: #9AC5F4;
+body.dark-mode label[for = "sidebar-button"] {
+    background-color: #dcab5e;
+}
+body.dark-mode .sidebar {
+    background-color: #dcab5e;
+}
+body.dark-mode .sidebar-line {
+    background-color:#3198f9;
+}
+body.dark-mode #sidebar-button:checked + label {
+  background-color:#3198f9;
 }
 body.dark-mode .sticky {
     color: #001b35;
@@ -32,72 +48,94 @@ body.dark-mode .sticky {
     height: 100vh;
   }
 
-  /* Dropdown sidebar */
-  /* Dropdown button*/
-    .dropdown-button {
-    background-color: #060119;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    width: 60px;
-    height: 60px;
-    border-radius: 20px;
-    transition: 0.3s;
-    text-align: left;
-  }
-  .dropdown-button span {
-    display: none;
-    transition: 0.3s;
-  }
-  /* Hover effect */
-  .dropdown-button:hover {
-    width: 100px;
-    height: 200px;
-  }  
-  .dropdown-button:hover h1{
-    display:none;
-  }
-  .dropdown-button:hover span {
-    display:block;
-  }
-  /* Focus effect */
-  .dropdown-button:focus {
-    width: 100px;
-    height: 200px;
-  }
-  .dropdown-button:focus span {
-    display:block;
-  }
+  /* 
+   *Dropdown sidebar 
+   */
 
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
+   #sidebar-button {
+    display:none;
+   }
+
+   label[for = "sidebar-button"] {
     position: fixed;
-    left: 20px;
     top: 20px;
     z-index: 2;
+    left: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    background-color: var(--sidebar-color);
+    transition: 0.2s;
+   }
+  /* When the checkbox is checked, add a blue background */
+  #sidebar-button:checked + label {
+    background-color: var(--sidebar-button-color);
   }
-  
+  label[for = "sidebar-button"]:hover {
+    position: fixed;
+    top: 15px;
+    z-index: 2;
+    left: 15px;
+    height: 64px;
+    width: 64px;
+    border-radius: 20px;
+   }
+   .sidebar-line {
+     position:absolute;
+     width: 36px;
+     height: 5px;
+     border-radius: 10px;
+     background-color:var(--sidebar-button-color);
+     transition: 0.2s;
+     transform-origin: right center;
+     left: 7px;
+   }
 
 
-  /* Side navigation bar */
-  .sidenav {
-      height: 100%;
-      width: 160px;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: #060119;
-      overflow-x: hidden;
-      padding-top: 20px;
-    }
-    
-    .sidenav a {
-      padding: 6px 8px 6px 16px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #818181;
-      display: block;
-    }
-  
+   label[for = "sidebar-button"]:hover span {
+    left: 8px;
+    width: 48px;
+    height: 6px;
+   }
+
+   /* Menu bar formatting*/
+   label[for = "sidebar-button"] span:nth-child(1) { top: 11px;}
+   label[for = "sidebar-button"] span:nth-child(2) { top: 23px;}
+   label[for = "sidebar-button"] span:nth-child(3) { top: 35px;}
+   label[for = "sidebar-button"]:hover span:nth-child(1) {top: 14px;}
+   label[for = "sidebar-button"]:hover span:nth-child(2) {top: 29px;}
+   label[for = "sidebar-button"]:hover span:nth-child(3) {top: 44px;}
+
+   #sidebar-button:checked + label span {
+    height: 0px;
+  }
+
+.sidebar {
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: -25%;
+  background-color: var(--sidebar-color); /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.3s;
+}
+
+/* Pull out sidebar when pressed */
+#sidebar-button:checked ~ .sidebar {
+  left: 0%;
+}
+
+.sidebar a {
+  padding-top: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}

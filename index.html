@@ -3,6 +3,8 @@
 <head>
     <link rel="stylesheet" href="styleCover.css">
     <link rel="stylesheet" href="styleUnder.css">
+    <link rel="stylesheet" href="styleResume.css">
+    <link rel="stylesheet" href="styleProjects.css">
 </head>
 <body>
   <div class = "mainCover" id = "about">
@@ -39,6 +41,13 @@
           <img src= "linkedinIcon.png">
         </div>
       </a>
+      <!--
+      <a href = "https://chimeralc.itch.io/">
+        <div class = "figure" style = "background-color:#da3d4e;">
+          <img src= "itchIoIcon.png">
+        </div>
+      </a>
+      -->
     </div>
     <!-- Scroll Recomendation-->
     <div class = "mainScroll">
@@ -59,24 +68,96 @@
     <span class="sidebar-line"></span>
     <span class="sidebar-line"></span>
   </label>
-  <div class="sidebar-button">
 
-  </div>
   <div class = "sidebar">
-
+    <div style="height: 80px"></div>
+    <a href="#about"><b>About</b></a>
+    <a href="#resume"><b>Resume</b></a>
     
   </div>
 
-
+  <!-- Under Construction -->
+  <div style = "position: fixed; right: 10px;
+  overflow: hidden; z-index: 2; color:rgb(205, 134, 77)">
+    <a style = "font-size: 60px;"> Under Construction</a>
+  </div>
 
   <!-- Absolute placements used for jumps -->
   <div id = "resume" style = "position: absolute; top: 100vh;"></div>
   <!-- Following content-->
   <div class = "filler"> </div>
   <div class = "sticky" id = "under">
-    <h1 style = "padding-top: 40px">Under Construction</h1>
-    <div class = "main">
+    <div class = "resume">
+      
+      <!-- Top title -->
+      <h1 style = "text-align: center; padding-top: 40px">Resume</h1>
+      <!-- Education -->
+      <input type="radio" checked="checked" id = "resume-education" name = "resume-checkbox">
+      <label for = "resume-education"> 
+       <div class = "resume-highlight-bar"></div>
+       <h3> Education </h3>
+      </label>
+      <div class = "resume-sidebar-education">
+        <div class = "resume-sidebar">
+          <div class = "resume-sidebar-cross">
+            <h2> Rice University</h2>
+            <h3> 2021 - 2025 (expected) </h3>
+        </div>
+          <br><br><br><br>
+            <a> Computer Science and Mathematics Major 4.0/4.0 GPA
+            </a>
+            <a style = "font-size: 25px; margin-left: 15px"> Courses:</a>
+            <a> Fundamentals of Computer Engineering, Computational Thinking,
+              Probability and Statistics, Reasoning about Algorithm, Introduction to Program Design,
+              Matrix Analysis for Data Science, Algorithmic Thinking,
+              Honors Calculus, Honors Linear Algebra,
+              Introduction to Computer Systems, Fundamentals of Parallel Programming,
+              Complex Analysis, Into to Math Cryptography</a>            
+        </div>
+       </div>
+      <!-- Experience -->
+      <input type="radio" id = "resume-experience"  name = "resume-checkbox">
+      <label for = "resume-experience"> 
+       <div class = "resume-highlight-bar"></div>
+       <h3> Experience </h3>
+      </label>
+      <div class = "resume-sidebar-experience">
+        <div class = "resume-sidebar">
+          
+          <div class = "resume-sidebar-cross" style = "margin-bottom: 30px;">
+            <h2 style = "font-size: 30px"> Mathematics Teaching Assistant </h2>
+            <h3 style = "margin-top: -50px"> 2022 </h3>
+        </div>
+        <a style = "font-size: 16px; margin-left: 20px"> AwesomeMath Summer Program</a>
+            <a> Collaborated with an instructor to teach high-level competition
+               mathematics to high school students</a>      
+
+          <div class = "resume-sidebar-cross" style = "margin-bottom: 30px;">
+            <h2 style = "font-size: 30px"> Rice Datathon </h2>
+            <h3 style = "margin-top: -50px"> 2021 </h3>
+        </div>
+        <a style = "font-size: 16px; margin-left: 20px"> Rice University’s Annual Data Science Competition</a>
+            <a> Developed a Python program using NumPy and Pandas that would produce potential redistricting of the Houston
+              area based on census data; awarded Best Houston/TX Trends and First Place in the respective Track</a>       
+        </div>
+      </div>
+      <!-- Skills -->
+      <input type="radio" id = "resume-skills"  name = "resume-checkbox">
+      <label for = "resume-skills"> 
+       <div class = "resume-highlight-bar"></div>
+       <h3> Skills </h3>
+      </label>
+      <div class = "resume-sidebar-skills">
+        <div class = "resume-sidebar">
+         <div class = "resume-sidebar-cross" style = "margin-bottom: 30px;">
+          <h2 style = "font-size: 30px"> Coding Languages </h2>
+      </div>
+         <a> Python, Java, C++, C#, Matlab, Javascript, HTML</a>      
+        </div>
+      </div>
     </div>
+
+    <div class = "projects"></div>
   </div>
 
 

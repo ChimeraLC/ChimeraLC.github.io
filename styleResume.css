@@ -1,195 +1,167 @@
-
-
-body.dark-mode {
-    background-color: #D7C0AE;
-}
 .resume {
-  position:relative;
-  overflow-x: hidden;
-  height: 1000px;
+    height: 800px;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
-/*
-* IDEA: click on a box cause it to expand outwards and cover more of the screen
-*/
-
-#resume-education {
-  display: none;
+/* Group these things into single elements*/
+.resume h1 {
+    padding-left: 100px;
+    padding-top: 40px;
+    font-size: 50px;
+}
+.resume h2 {
+    padding-left: 75px;
+    font-size: 35px;
+    margin-bottom: 10px
+}
+.resume h3 {
+    padding-left: 50px;
+    color:rgb(158, 158, 158);
+    font-weight: normal;
+    font-size: 20px;
+    letter-spacing:-0.5px;
+    margin-top:0px;
+}
+.resume .header h2 {
+    display: inline;
+    padding-left: 40px;
+    font-size: 30px;
+    text-shadow: 0.5px 0 #ffffff;
+    letter-spacing:1px;
+    font-weight:bold;
+}
+.resume .header h3 {
+    display: inline;
+    font-weight: normal;
+    margin-top: 0px;
+    padding-left: 60px;
+    letter-spacing:0px;
+    font-size: 20px;
+    color:rgb(255, 255, 255);
+}
+.resume-element .header h3 {
+    display: block;
+    font-weight: normal;
+    margin-top: 0px;
+    padding-left: 80px;
+    margin-bottom: 0px;
+    letter-spacing:0px;
+    font-size: 20px;
+    color:rgb(255, 255, 255);
+}
+#resume-courses {
+    display: none;
 }
 
-label[for = "resume-education"] {
-  left: 30px;
-  position:relative;
-  display: block;
-  font-size: 50px;
-  width: 280px;
+.resume-element-clicker {
+    display: none;
 }
 
-.resume-highlight-bar {
-  position: absolute;
-  top: 35px;
-  left: -5px;
-  width: 340px;
-  background:#ffffff00;
-  height: 25px;
-  transition: 0.5s;
-  z-index: -1;
-}
-label[for = "resume-education"]:hover .resume-highlight-bar{
-  background:rgba(108, 0, 180, 0.302);
-}
-#resume-education:checked + label .resume-highlight-bar{
-  background:rgba(108, 0, 180, 0.702);
-}
-
-.resume-sidebar {
-  position: absolute;
-    /* Firefox */
-  width: -moz-calc(100% - 380px);
-  /* WebKit */
-  width: -webkit-calc(100% - 380px);
-  /* Opera */
-  width: -o-calc(100% - 380px);
-  /* Standard */
-  width: calc(100% - 380px);
-  top: 150px;
-  margin-left: 100%;
-  transition: margin-left 0.5s;
-  animation: none;
-  height: 400px;
-  background-color: rgb(56, 56, 155);
-  border-radius: 15px;
-}
-.resume-sidebar-cross {
-  display: block;
-  height: 0px;
-  width: 100%;
-  margin-bottom: -20px;
-}
-.resume-sidebar-cross h2 {
-  text-decoration: none;
-  text-align: left;
-  margin-left: 20px;
-  margin-top: 10px;
-  font-size: 40px;
-}
-.resume-sidebar-cross h3 {
-  float:right;
-  text-decoration: none;
-  text-align: left;
-  font-size: 20px;
-  margin-top: -60px;
-  margin-right: 30px;
-}
-
-.resume-sidebar a {
-  position: relative;
-  padding-top: -45px;
-  padding-left: 5px;
-  text-decoration: none;
-  text-align: left;
-  font-size: 20px;
-  display: block;
-  margin-left: 30px;
-  margin-right: 40px;
-}
-#resume-education:checked ~ .resume-sidebar-education .resume-sidebar{
-  margin-left: 400px;
-}
-
-#resume-experience {
-  display: none;
-}
-
-label[for = "resume-experience"] {
-  left: 30px;
-  position:relative;
-  display: block;
-  font-size: 50px;
-  width: 280px;
-}
-
-
-label[for = "resume-experience"]:hover .resume-highlight-bar{
-  background:rgba(108, 0, 180, 0.302);
-}
-#resume-experience:checked + label .resume-highlight-bar{
-  background:rgba(108, 0, 180, 0.702);
-}
-#resume-experience:checked ~ .resume-sidebar-experience .resume-sidebar{
-  margin-left: 400px;
-}
-
-
-#resume-skills {
-  display: none;
-}
-
-label[for = "resume-skills"] {
-  left: 30px;
-  position:relative;
-  display: block;
-  font-size: 50px;
-  width: 280px;
-}
-
-
-label[for = "resume-skills"]:hover .resume-highlight-bar{
-  background:rgba(108, 0, 180, 0.302);
-}
-#resume-skills:checked + label .resume-highlight-bar{
-  background:rgba(108, 0, 180, 0.702);
-}
-#resume-skills:checked ~ .resume-sidebar-skills .resume-sidebar{
-  margin-left: 400px;
-}
-
-/* On screens that are less than 925px wide, change orientation*/
-@media screen and (max-width: 925px) {
-  .resume-sidebar {
+.resume-element {
+    display: inline-block;
     position: relative;
-      /* Firefox */
-    width: 100%;
-    top: 0px;
-    margin-left: 0px;
-    height: 0px;
-    transition: height 0.5s, color 0s;
-    background-color: rgba(56, 56, 155, 0);
-    border-radius: 15px;
-    z-index: -1;
-    color:#d7c0ae00;
-    animation-play-state: paused;
-  }
-  label[for = "resume-education"] {
-    margin-bottom: -40px;
-  }
-  label[for = "resume-experience"] {
-    margin-top: -40px;
-    margin-bottom: -40px;
-  }
-  label[for = "resume-skills"] {
-    margin-top: -40px;
-    margin-bottom: -40px;
-  }
-  #resume-education:checked ~ .resume-sidebar-education .resume-sidebar{
-    height: 300px;
-    color:white;
-    margin-left: 0px;
-    background-color: rgb(56, 56, 155);
-    transition: height 0.5s, color 0.5s cubic-bezier(1,-0.6,1,.5);
-  }
-  #resume-experience:checked ~ .resume-sidebar-experience .resume-sidebar{
-    height: 300px;
-    color:white;
-    margin-left: 0px;
-    background-color: rgb(56, 56, 155);
-    transition: height 0.5s, color 0.5s cubic-bezier(1,-0.6,1,.5);
-  }
-  #resume-skills:checked ~ .resume-sidebar-skills .resume-sidebar{
+    width: 525px;
     height: 100px;
-    color:white;
-    margin-left: 0px;
-    background-color: rgb(56, 56, 155);
-    transition: height 0.5s, color 0.5s cubic-bezier(1,-0.6,1,.5);
-  }
 }
+
+.resume label {
+    left: 330px;
+    top: -90px;
+    position: absolute;
+    display: block;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 25px;
+    background-color:rgba(0, 0, 0, 0);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    z-index: 1;
+}
+
+.resume-element label {
+    left: 490px;
+    top: 10px;
+}
+.resume label .resume-expandable {
+    text-align: left;
+    visibility:hidden;
+    position: relative;
+    color:rgb(158, 158, 158);
+}
+.resume label span {
+    position: absolute;
+    display: block;
+    background-color: aliceblue;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    transform-origin: center;
+}
+.resume label:hover span {
+    background-color:bisque;
+}
+.resume label span:nth-child(1) {
+    width: 36px;
+    height: 8px;
+    left: 7px;
+    top: 21px;
+}
+.resume label span:nth-child(2) {
+    width: 8px;
+    height: 36px;
+    left: 21px;
+    top: 7px;
+}
+
+#resume-courses:checked + label {
+    width: 500px;
+    height: 300px;
+    left: 350px;
+    top: -190px;
+    border-radius: 25px;
+  }
+#resume-courses:checked + label span {
+    width: 500px;
+    height: 300px;
+    left: 0px;
+    top: 0px;
+    border-radius: 25px;
+    z-index: 1;
+  }
+  #resume-courses:checked + label .resume-expandable {
+    transition: visibility 0.2s 0.4s;
+    visibility:initial;
+    z-index: 1;
+  }
+
+  
+.resume-element-clicker:checked + label {
+    width: 500px;
+    height: 200px;
+    left: 30px;
+    top: 0px;
+    border-radius: 25px;
+    z-index: 2;
+  }
+  .resume-element-clicker:checked + label span {
+    width: 500px;
+    height: 200px;
+    left: 0px;
+    top: 0px;
+    border-radius: 25px;
+  }
+  .resume-element-clicker:checked + label .resume-expandable {
+    transition: visibility 0.2s 0.4s;
+    visibility:initial;
+    z-index: 2;
+  }
+
+/* TODO: fix the animatino for smaller screens*/
+  @media screen and (max-width: 1100px) {
+    #resume-courses:checked + label[for = "resume-courses"]{
+        left: auto;
+        right: 250px;
+    }
+  }

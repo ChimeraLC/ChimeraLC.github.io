@@ -5,6 +5,27 @@
     <link rel="stylesheet" href="styleUnder.css">
     <link rel="stylesheet" href="styleResume.css">
     <link rel="stylesheet" href="styleProjects.css">
+    <style>
+      /* width */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #d3d3d3; 
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888; 
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+    </style>
 </head>
 <body>
   <div class = "mainCover" id = "about">
@@ -13,6 +34,7 @@
       <a><br> </a>
       <a href="#about"><b>About</b></a>
       <a href="#resume"><b>Resume</b></a>
+      <a href="#projects"><b>Projects</b></a>
     </div>
     <!-- Main content-->
     <div class="mainTitle">
@@ -41,13 +63,13 @@
           <img src= "linkedinIcon.png">
         </div>
       </a>
-      <!--
+      
       <a href = "https://chimeralc.itch.io/">
         <div class = "figure" style = "background-color:#da3d4e;">
           <img src= "itchIoIcon.png">
         </div>
       </a>
-      -->
+      
     </div>
     <!-- Scroll Recomendation-->
     <div class = "mainScroll">
@@ -73,6 +95,7 @@
     <div style="height: 80px"></div>
     <a href="#about"><b>About</b></a>
     <a href="#resume"><b>Resume</b></a>
+    <a href="#projects"><b>Projects</b></a>
     
   </div>
 
@@ -87,77 +110,139 @@
   <!-- Following content-->
   <div class = "filler"> </div>
   <div class = "sticky" id = "under">
+    <!-- Resume -->
     <div class = "resume">
-      
-      <!-- Top title -->
-      <h1 style = "text-align: center; padding-top: 40px">Resume</h1>
-      <!-- Education -->
-      <input type="radio" checked="checked" id = "resume-education" name = "resume-checkbox">
-      <label for = "resume-education"> 
-       <div class = "resume-highlight-bar"></div>
-       <h3> Education </h3>
-      </label>
-      <div class = "resume-sidebar-education">
-        <div class = "resume-sidebar">
-          <div class = "resume-sidebar-cross">
-            <h2> Rice University</h2>
-            <h3> 2021 - 2025 (expected) </h3>
+      <h1>Resume</h1>
+      <h2>Education</h2>
+
+        <div class = "header">
+          <h2> Rice University</h2>
+          <h3> 2021 - 2025 (expected) </h3>
         </div>
-          <br><br><br><br>
-            <a> Computer Science and Mathematics Major 4.0/4.0 GPA
-            </a>
-            <a style = "font-size: 25px; margin-left: 15px"> Courses:</a>
-            <a> Fundamentals of Computer Engineering, Computational Thinking,
+        <h3>Computer Science and Mathematics Major, 4.0/4.0 GPA</h3>
+        <div style = "position: absolute; left: 200px; top: 310px; width: 100%;">        
+          <input type="checkbox" id = "resume-courses">
+          <label for = "resume-courses">
+            <span></span>
+            <span></span>
+            <div class = "resume-expandable">
+              <h3 style="padding-left: 20px; padding-top: 5px;">Completed Courses:</h3>
+              <p style = "padding: 20px; margin-top: -45px; margin-bottom: -25px;">Fundamentals of Computer Engineering, Computational Thinking,
               Probability and Statistics, Reasoning about Algorithm, Introduction to Program Design,
               Matrix Analysis for Data Science, Algorithmic Thinking,
               Honors Calculus, Honors Linear Algebra,
               Introduction to Computer Systems, Fundamentals of Parallel Programming,
-              Complex Analysis, Into to Math Cryptography</a>            
+              Complex Analysis, Into to Math Cryptography</p>
+              <h3 style="padding-left: 20px; padding-top: 5px;">Ongoing Courses:</h3>
+              
+            </div>
+          </label>
+        </div>
+      
+      <h2>Experience</h2>
+
+      <div class = resume-element>
+
+        <div class = "header">
+          <h2 style = "font-size: 28px;"> Undergraduate Research Assistant</h2>
+          <h3> 2023 </h3>
+        </div>
+        <h3>Rice D2K Lab</h3>     
+          <input type="checkbox" id = "resume-element-clicker1" class = "resume-element-clicker">
+          <label for = "resume-element-clicker1">
+            <span></span>
+            <span></span>
+            <div class = "resume-expandable">
+              <h3 style="padding-left: 20px; padding-top: 5px;">Inner Content:</h3>
+              <p style = "padding: 20px; margin-top: -45px; margin-bottom: -25px;">
+              Stuff inner</p>
+              <h3 style="padding-left: 20px; padding-top: 5px;">Ongoing Courses:</h3>
+              
+            </div>
+        </div>
+      <div class = resume-element>
+
+        <div class = "header">
+          <h2> Mathematics Teaching Assistant</h2>
+          <h3> 2022 </h3>
+        </div>
+        <h3>AwesomeMath Summer Program</h3>     
+          <input type="checkbox" id = "resume-element-clicker3" class = "resume-element-clicker">
+          <label for = "resume-element-clicker3">
+            <span></span>
+            <span></span>
+            <div class = "resume-expandable">
+              <h3 style="padding-left: 20px; padding-top: 5px;">Innter Content:</h3>
+              <p style = "padding: 20px; margin-top: -45px; margin-bottom: -25px;">
+              Stuff inner</p>
+              <h3 style="padding-left: 20px; padding-top: 5px;">Ongoing Courses:</h3>
+              
+            </div>
+        </div>
+
+        <div class = resume-element>
+
+          <div class = "header">
+            <h2> Rice Datathon</h2>
+            <h3> 2022 </h3>
+          </div>
+          <h3>Rice University’s Annual Data Science Competition</h3>     
+            <input type="checkbox" id = "resume-element-clicker2" class = "resume-element-clicker">
+            <label for = "resume-element-clicker2">
+              <span></span>
+              <span></span>
+              <div class = "resume-expandable">
+                <h3 style="padding-left: 20px; padding-top: 5px;">Inner Content:</h3>
+                <p style = "padding: 20px; margin-top: -45px; margin-bottom: -25px;">
+                Stuff inner</p>
+                <h3 style="padding-left: 20px; padding-top: 5px;">Ongoing Courses:</h3>
+                
+              </div>
+          </div>
+        </div>
+      </div>
+      
+    
+
+
+    </div>
+    <!-- Projects -->
+    <div class = "projects">
+      
+      <!-- Top title -->
+      <h1 style = "text-align: center; padding-top: 40px">Projects</h1>
+      <!-- Education -->
+      <input type="radio" checked="checked" id = "projects-education" name = "projects-checkbox">
+      <label for = "projects-education"> 
+       <div class = "projects-highlight-bar"></div>
+       <h3> Project1 </h3>
+      </label>
+      <div class = "projects-sidebar-education">
+        <div class = "projects-sidebar">      
         </div>
        </div>
       <!-- Experience -->
-      <input type="radio" id = "resume-experience"  name = "resume-checkbox">
-      <label for = "resume-experience"> 
-       <div class = "resume-highlight-bar"></div>
-       <h3> Experience </h3>
+      <input type="radio" id = "projects-experience"  name = "projects-checkbox">
+      <label for = "projects-experience"> 
+       <div class = "projects-highlight-bar"></div>
+       <h3> Project2 </h3>
       </label>
-      <div class = "resume-sidebar-experience">
-        <div class = "resume-sidebar">
-          
-          <div class = "resume-sidebar-cross" style = "margin-bottom: 30px;">
-            <h2 style = "font-size: 30px"> Mathematics Teaching Assistant </h2>
-            <h3 style = "margin-top: -50px"> 2022 </h3>
-        </div>
-        <a style = "font-size: 16px; margin-left: 20px"> AwesomeMath Summer Program</a>
-            <a> Collaborated with an instructor to teach high-level competition
-               mathematics to high school students</a>      
-
-          <div class = "resume-sidebar-cross" style = "margin-bottom: 30px;">
-            <h2 style = "font-size: 30px"> Rice Datathon </h2>
-            <h3 style = "margin-top: -50px"> 2021 </h3>
-        </div>
-        <a style = "font-size: 16px; margin-left: 20px"> Rice University’s Annual Data Science Competition</a>
-            <a> Developed a Python program using NumPy and Pandas that would produce potential redistricting of the Houston
-              area based on census data; awarded Best Houston/TX Trends and First Place in the respective Track</a>       
+      <div class = "projects-sidebar-experience">
+        <div class = "projects-sidebar">      
         </div>
       </div>
       <!-- Skills -->
-      <input type="radio" id = "resume-skills"  name = "resume-checkbox">
-      <label for = "resume-skills"> 
-       <div class = "resume-highlight-bar"></div>
-       <h3> Skills </h3>
+      <input type="radio" id = "projects-skills"  name = "projects-checkbox">
+      <label for = "projects-skills"> 
+       <div class = "projects-highlight-bar"></div>
+       <h3> Project3 </h3>
       </label>
-      <div class = "resume-sidebar-skills">
-        <div class = "resume-sidebar">
-         <div class = "resume-sidebar-cross" style = "margin-bottom: 30px;">
-          <h2 style = "font-size: 30px"> Coding Languages </h2>
-      </div>
-         <a> Python, Java, C++, C#, Matlab, Javascript, HTML</a>      
+      <div class = "projects-sidebar-skills">
+        <div class = "projects-sidebar">      
         </div>
       </div>
     </div>
 
-    <div class = "projects"></div>
   </div>
 
 

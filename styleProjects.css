@@ -3,22 +3,23 @@
 body.dark-mode {
     background-color: #D7C0AE;
 }
-.resume {
+.projects {
   position:relative;
   overflow-x: hidden;
   overflow-y: hidden;
-  height: auto;
+  height: 1000px;
+  margin-top: 0px;
 }
 
 /*
 * IDEA: click on a box cause it to expand outwards and cover more of the screen
 */
 
-#resume-education {
+#projects-education {
   display: none;
 }
 
-label[for = "resume-education"] {
+label[for = "projects-education"] {
   left: 30px;
   position:relative;
   display: block;
@@ -26,7 +27,7 @@ label[for = "resume-education"] {
   width: 280px;
 }
 
-.resume-highlight-bar {
+.projects-highlight-bar {
   position: absolute;
   top: 35px;
   left: -5px;
@@ -37,14 +38,14 @@ label[for = "resume-education"] {
   transition: 0.5s;
   z-index: -1;
 }
-label[for = "resume-education"]:hover .resume-highlight-bar{
+label[for = "projects-education"]:hover .projects-highlight-bar{
   background:rgba(108, 0, 180, 0.302);
 }
-#resume-education:checked + label .resume-highlight-bar{
+#projects-education:checked + label .projects-highlight-bar{
   background:rgba(108, 0, 180, 0.702);
 }
 
-.resume-sidebar {
+.projects-sidebar {
   position: absolute;
     /* Firefox */
   width: -moz-calc(100% - 380px);
@@ -63,20 +64,20 @@ label[for = "resume-education"]:hover .resume-highlight-bar{
   background-color: rgb(56, 56, 155);
   border-radius: 15px;
 }
-.resume-sidebar-cross {
+.projects-sidebar-cross {
   display: block;
   height: 0px;
   width: 100%;
   margin-bottom: -20px;
 }
-.resume-sidebar-cross h2 {
+.projects-sidebar-cross h2 {
   text-decoration: none;
   text-align: left;
   margin-left: 20px;
   margin-top: 10px;
   font-size: 40px;
 }
-.resume-sidebar-cross h3 {
+.projects-sidebar-cross h3 {
   float:right;
   text-decoration: none;
   text-align: left;
@@ -85,7 +86,7 @@ label[for = "resume-education"]:hover .resume-highlight-bar{
   margin-right: 30px;
 }
 
-.resume-sidebar a {
+.projects-sidebar a {
   position: relative;
   padding-top: -45px;
   padding-left: 5px;
@@ -96,15 +97,15 @@ label[for = "resume-education"]:hover .resume-highlight-bar{
   margin-left: 30px;
   margin-right: 40px;
 }
-#resume-education:checked ~ .resume-sidebar-education .resume-sidebar{
+#projects-education:checked ~ .projects-sidebar-education .projects-sidebar{
   margin-left: 400px;
 }
 
-#resume-experience {
+#projects-experience {
   display: none;
 }
 
-label[for = "resume-experience"] {
+label[for = "projects-experience"] {
   left: 30px;
   position:relative;
   display: block;
@@ -113,22 +114,22 @@ label[for = "resume-experience"] {
 }
 
 
-label[for = "resume-experience"]:hover .resume-highlight-bar{
+label[for = "projects-experience"]:hover .projects-highlight-bar{
   background:rgba(108, 0, 180, 0.302);
 }
-#resume-experience:checked + label .resume-highlight-bar{
+#projects-experience:checked + label .projects-highlight-bar{
   background:rgba(108, 0, 180, 0.702);
 }
-#resume-experience:checked ~ .resume-sidebar-experience .resume-sidebar{
+#projects-experience:checked ~ .projects-sidebar-experience .projects-sidebar{
   margin-left: 400px;
 }
 
 
-#resume-skills {
+#projects-skills {
   display: none;
 }
 
-label[for = "resume-skills"] {
+label[for = "projects-skills"] {
   left: 30px;
   position:relative;
   display: block;
@@ -137,19 +138,19 @@ label[for = "resume-skills"] {
 }
 
 
-label[for = "resume-skills"]:hover .resume-highlight-bar{
+label[for = "projects-skills"]:hover .projects-highlight-bar{
   background:rgba(108, 0, 180, 0.302);
 }
-#resume-skills:checked + label .resume-highlight-bar{
+#projects-skills:checked + label .projects-highlight-bar{
   background:rgba(108, 0, 180, 0.702);
 }
-#resume-skills:checked ~ .resume-sidebar-skills .resume-sidebar{
+#projects-skills:checked ~ .projects-sidebar-skills .projects-sidebar{
   margin-left: 400px;
 }
 
 /* On screens that are less than 925px wide, change orientation*/
 @media screen and (max-width: 925px) {
-  .resume-sidebar {
+  .projects-sidebar {
     position: relative;
       /* Firefox */
     width: 100%;
@@ -164,18 +165,18 @@ label[for = "resume-skills"]:hover .resume-highlight-bar{
     color:#d7c0ae00;
     animation-play-state: paused;
   }
-  label[for = "resume-education"] {
+  label[for = "projects-education"] {
     margin-bottom: -40px;
   }
-  label[for = "resume-experience"] {
+  label[for = "projects-experience"] {
     margin-top: -40px;
     margin-bottom: -40px;
   }
-  label[for = "resume-skills"] {
+  label[for = "projects-skills"] {
     margin-top: -40px;
     margin-bottom: -40px;
   }
-  #resume-education:checked ~ .resume-sidebar-education .resume-sidebar{
+  #projects-education:checked ~ .projects-sidebar-education .projects-sidebar{
     height: 300px;
     color:white;
     margin-left: 0px;
@@ -183,7 +184,7 @@ label[for = "resume-skills"]:hover .resume-highlight-bar{
     -webkit-transition:height 0.5s, color 0.5s cubic-bezier(1,-0.6,1,.5);
     transition: height 0.5s, color 0.5s cubic-bezier(1,-0.6,1,.5);
   }
-  #resume-experience:checked ~ .resume-sidebar-experience .resume-sidebar{
+  #projects-experience:checked ~ .projects-sidebar-experience .projects-sidebar{
     height: 300px;
     color:white;
     margin-left: 0px;
@@ -191,7 +192,7 @@ label[for = "resume-skills"]:hover .resume-highlight-bar{
     -webkit-transition:height 0.5s, color 0.5s cubic-bezier(1,-0.6,1,.5);
     transition: height 0.5s, color 0.5s cubic-bezier(1,-0.6,1,.5);
   }
-  #resume-skills:checked ~ .resume-sidebar-skills .resume-sidebar{
+  #projects-skills:checked ~ .projects-sidebar-skills .projects-sidebar{
     height: 300px;
     color:white;
     margin-left: 0px;

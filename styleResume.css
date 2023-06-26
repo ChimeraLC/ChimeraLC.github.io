@@ -1,32 +1,93 @@
+
+:root {
+    /* Deep sea style
+    --background-dark-color:rgb(15, 18, 34);
+    --text-dark-color:hsla(159, 42%, 88%, 1);
+    --text-dark-color2:hsla(160, 52%, 71%, 1);
+    --text-dark-highlight:rgb(99, 162, 163);
+    --text-dark-expand:#0f1b25;
+    */
+    /* Night style 
+    --background-dark-color:rgb(3, 5, 25);
+    --text-dark-color:rgb(237, 235, 255);
+    --text-dark-color2:#acadc3;
+    --text-dark-highlight:rgb(99, 162, 163);
+    --text-dark-expand:#0f1b25;
+    */
+
+    /* Discord style  */
+    --background-dark-color:#272934;
+    --text-dark-color:#f2f4fb;
+    --text-dark-color2:#9195ab;
+    --text-dark-highlight:#2c65ab;
+    --text-dark-expand:#2f3237;
+    
+    --background-light-color:#dcf2ff;
+    --text-light-color:rgb(25, 55, 55);
+    --text-light-color2:rgb(64, 113, 113);
+    --text-light-highlight:#537298;
+    --text-light-expand:#cce5e8;
+    
+  }
+
+body.dark-mode .resume {
+    background-color: var(--background-light-color);
+    color: var(--text-light-color);
+}
+body.dark-mode h1 {
+    text-shadow: 0.5px 0 --text-light-color;
+}
+body.dark-mode .resume h1 span {
+    background-color:var(--text-light-highlight);
+}
+body.dark-mode .resume a {
+    color: var(--text-light-color);
+}
+body.dark-mode .resume a span {
+    background-color: var(--text-light-highlight);
+}
+body.dark-mode .resume .resume-line h3 {
+    color: var(--text-light-color2);
+}
+body.dark-mode .resume-expandable label span {
+    background-color: var(--text-light-highlight);
+}
+body.dark-mode .resume-expand {
+    background-color: var(--text-light-expand);
+}
 .resume {
-    height: 900px;
+    height: auto;
     overflow-x: hidden;
     overflow-y: hidden;
+    background-color: var(--background-dark-color);
+    color:var(--text-dark-color);
 }
-
-/* Group these things into single elements*/
+/* Head title */
 .resume h1 {
-    padding-left: 150px;
+    padding-left: 20%;
     display: block;
     padding-top: 0px;
     margin-bottom: 20px;
-    text-shadow: 0.5px 0 #ffffff;
+    z-index: 1;
+    text-shadow: 0.5px 0 --text-dark-color;
     font-size: 70px;
 }
 .resume h1 span {
     position: absolute;
     display: block;
-    width: 270px;
-    top:85px;
-    left: 140px;
-    height: 20px;
-    z-index: -1;
-    background-color:blue
+    width: 250px;
+    top: 120px;
+    left: 19.5%;
+    height: 5px;
+    z-index: 0;
+    background-color:var(--text-dark-highlight);
 }
+
+/* Download pdf marker */
 .resume a {
     position: absolute;
     text-decoration: none;
-    color: #ffffff;
+    color:var(--text-dark-color);
     font-size: 30px;
     font-weight: bold;
     right: 10%;
@@ -38,24 +99,28 @@
     position: absolute;
     display: block;
     width: 200px;
-    height: 2px;
+    height: 3px;
     top: 70px;
     left: 20px;
-    background-color: blue;;
+    background-color: var(--text-dark-highlight);
 }
 
 .resume p {
     transition: 1s;
     margin-left: 35px;
 }
+.resume a:hover {
+    color:var(--text-dark-color2);
+}
 .resume a:hover p {
     margin-left: 70px;
 }
 
+/* Individual resume elements */
 .resume-element {
     position: relative;
     display: block;
-    height: 100px;
+    height: auto;
 }
 .resume-label {
     position: absolute;
@@ -64,10 +129,13 @@
 }
 .resume-label h2 {
     font-size: 40px;
+    margin-top: 70px;
 }
 .resume-line {
+    padding-top: 5px;
+    position: relative;
     display: block;
-    width: 60%;
+    width: 50%;
     padding-left: 30%;
 }
 .resume-line h2 {
@@ -76,6 +144,128 @@
 .resume-line h3 {
     margin-top: -25px;
     font-size: 25px;
-    color:rgb(167, 167, 167);
+    color:var(--text-dark-color2);
     font-weight:normal
+}
+.resume hr {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    width: 70%; 
+    opacity: 0.5;
+}
+/* Click for more info markers */
+.resume .resume-input {
+    display: none;
+}
+.resume-expandable label {
+    position: absolute;
+    right: -12%;
+    top: 50px;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+.resume-expandable label span {
+    display: block;
+    position: absolute;
+    border-radius: 2px;
+    transition: 0.5s;
+    background-color: var(--text-dark-highlight);
+}
+.resume-expandable label span:nth-child(1){
+    width: 50px;
+    height: 10px;
+    top: 20px;
+}
+.resume-expandable label span:nth-child(2){
+    width: 10px;
+    height: 50px;
+    left: 20px;
+}
+.resume-expandable label:hover span {
+    transform: rotate(-10deg);
+}
+.resume-input:checked + label span {
+    transform: rotate(45deg);
+}
+/* TODO: make this wrap 180 degrees */
+.resume-input:checked + label:hover span {
+    transform: rotate(55deg);
+}
+.resume-expand {
+    position: relative;
+    max-height: 1px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    width: 120%;
+    background-color:var(--text-dark-expand);
+    border-radius: 2px;
+}
+.resume-expand p {
+    margin-left: 15px;
+    padding-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.resume-input:checked ~.resume-expand {
+    max-height: 180px;
+    
+    transition: max-height 1.5s;
+}
+
+/* On screens that are less than 1000px wide, change orientation*/
+@media screen and (max-width: 1000px) {
+    
+.resume-label {
+    position: relative;
+    left: 0%;
+    text-align:center;
+    top: 0px;
+}
+.resume-label h2 {
+    font-size: 45px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.resume-expandable label {
+    top: 50px;
+    right: -15%;
+}
+
+.resume-line {
+    margin-top: -20px;
+    display: block;
+    width: 60%;
+    padding-left: 15%;
+}
+.resume-line h3 {
+    padding-left: 2%
+}
+.resume-expand {
+    width: 117%;
+}
+.resume-input:checked ~.resume-expand {
+    max-height: 250px;
+    
+}
+}
+
+@media screen and (max-width: 800px) {
+    
+.resume a {
+    right: auto;
+    top: 100px;
+    left: 20%;
+}
+.resume h1 {
+    margin-bottom: 70px;
+    margin-left: 2%;
+}
+.resume-input:checked ~.resume-expand {
+    max-height: 350px;
+    
+}
 }

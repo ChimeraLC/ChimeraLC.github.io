@@ -19,10 +19,10 @@ body.dark-mode + :root {
 
 }
 body.dark-mode label[for = "sidebar-button"] {
-    background-color: #dcab5e;
+    background-color: #0a4863;
 }
 body.dark-mode .sidebar {
-    background-color: #dcab5e;
+    background-color: #0a4863;
 }
 body.dark-mode .sidebar-line {
     background-color:#3198f9;

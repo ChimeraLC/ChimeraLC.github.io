@@ -226,6 +226,9 @@ body.dark-mode .topnav a:hover {
   .mainImage img {
       width: 200px;
   }
+  .filler {
+    height: 500px;
+  }
   
 }
   /* On screens that are less than 500px wide, make vertical*/

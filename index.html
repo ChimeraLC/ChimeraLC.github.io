@@ -23,12 +23,12 @@
 
       /* Handle on hover */
       ::-webkit-scrollbar-thumb:hover {
-        background: #555; 
+        background: #555;
       }
     </style>
 </head>
 <body>
-  <div class = "mainCover" id = "about">
+  <div class = "mainCover" id = "about----">
     <!-- Navigation bar-->
     <div class="topnav" id = "topnav">
       <a><br> </a>
@@ -105,8 +105,10 @@
   overflow: hidden; z-index: 2; color:rgb(205, 134, 77)">
     <a style = "font-size: 60px;"> Under Construction</a>
   </div>
-  <!-- Absolute placements used for jumps -->
-  <div id = "resume" style = "position: absolute; top: 100vh;"></div>
+  <!-- Absolute placements used for jumps ----------------------------------->
+  
+  <div id = "resume-----" style = "position: absolute; top: 100vh;"></div>
+
   <!-- Following content-->
   <div class = "filler"> </div>
   <div class = "sticky" id = "under">
@@ -224,42 +226,54 @@ Complex Analysis, Into to Math Cryptography
 
     </div>
     
+
+    <!-- Absolute placement for jumps (incomplete) ----------------------->
     <!-- Projects -->
-        <div style = "height: 50px"></div>
     <div class = "projects">
-      
-      <!-- Top title -->
-      <h1 style = "text-align: center; padding-top: 40px">Projects</h1>
-      <!-- Education -->
-      <input type="radio" checked="checked" id = "projects-education" name = "projects-checkbox">
-      <label for = "projects-education"> 
-       <div class = "projects-highlight-bar"></div>
-       <h3> Project1 </h3>
-      </label>
-      <div class = "projects-sidebar-education">
-        <div class = "projects-sidebar">      
+      <h1>Projects</h1>
+
+      <div class = "projects-element">
+        <h2> 
+          Tic-Tac-Toe Video Solver</h2>
+          
+          <div style = "width: 500px; right: 10px;">
+            <h3> A program that detects valid tic-tac-toe grids in webcam footage and recommends next moves.</h3>
+          </div>
+        <div class = "projects-image">
+          <h3> https://github.com/ChimeraLC/TTT-Video-Solver</h3>
+          <a href = "https://github.com/ChimeraLC/TTT-VIdeo-Solver">
+          <img src="placeholder.jpg" alt="Project Image" width="350px">
+        </a>
         </div>
-       </div>
-      <!-- Experience -->
-      <input type="radio" id = "projects-experience"  name = "projects-checkbox">
-      <label for = "projects-experience"> 
-       <div class = "projects-highlight-bar"></div>
-       <h3> Project2 </h3>
-      </label>
-      <div class = "projects-sidebar-experience">
-        <div class = "projects-sidebar">      
-        </div>
+    </div>
+      <div class = "projects-element">
+          <h2> Window Physics</h2>
+
+          
+        <input type="checkbox" id = "projects-expand2" class = "projects-input">
+        <label for = "projects-expand2">
+          <span></span>
+          <span></span>
+        </label>
+        <video width="350" height="240" controls autoplay muted>
+          <source src="vid-windowPhysics.mp4" type="video/mp4">
+        </video>
+
+          <div style = "width: 500px; right: 10px;">
+            <h3> A physics simulator that also takes into account the position and borders of the window on the screen.</h3>
+          </div>
+
+          
+          <div class = "projects-image">
+            <h3> https://github.com/ChimeraLC/WindowPhysics</h3>
+            <a href = "https://github.com/ChimeraLC/WindowPhysics">
+            <img src="img-windowphysics.png" alt="Project Image" width="350px">
+          </a>
+          </div>
       </div>
-      <!-- Skills -->
-      <input type="radio" id = "projects-skills"  name = "projects-checkbox">
-      <label for = "projects-skills"> 
-       <div class = "projects-highlight-bar"></div>
-       <h3> Project3 </h3>
-      </label>
-      <div class = "projects-sidebar-skills">
-        <div class = "projects-sidebar">      
-        </div>
-      </div>
+
+
+
     </div>
 
   </div>

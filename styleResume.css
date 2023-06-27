@@ -1,6 +1,6 @@
 
 :root {
-    /* Deep sea style
+    /* Deep sea style 
     --background-dark-color:rgb(15, 18, 34);
     --text-dark-color:hsla(159, 42%, 88%, 1);
     --text-dark-color2:hsla(160, 52%, 71%, 1);
@@ -21,6 +21,7 @@
     --text-dark-color2:#9195ab;
     --text-dark-highlight:#2c65ab;
     --text-dark-expand:#2f3237;
+
     
     --background-light-color:#dcf2ff;
     --text-light-color:rgb(25, 55, 55);
@@ -211,7 +212,7 @@ body.dark-mode .resume-expand {
     font-size: 20px;
 }
 .resume-input:checked ~.resume-expand {
-    max-height: 180px;
+    max-height: 220px;
     
     transition: max-height 1.5s;
 }

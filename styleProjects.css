@@ -1,6 +1,6 @@
 .projects {
     height: 1000px;
-    background-color:#3c3f4b;
+    background-color:#272934;
     margin-top: -50px;
     position: relative;
 }
@@ -47,10 +47,10 @@
     position: absolute;
     background-color: white;
     transform: rotate(45deg);
-    width: 25px;
+    width: 20px;
     height: 8px;
-    top: 16px;
-    left: 5px;
+    top: 17px;
+    left: 7px;
     transition: 0.5s;
 }
 .projects label span:nth-child(2){
@@ -58,23 +58,23 @@
     position: absolute;
     background-color: white;
     transform: rotate(-45deg);
-    top: 28px;
-    left: 5px;
-    width: 25px;
+    top: 27px;
+    left: 7px;
+    width: 20px;
     height: 8px;
     transition: 0.5s;
 }
 .projects-input:checked + label span:nth-child(1) {
     transform: rotate(90deg);
-    left: -5px;
-    top: 20px;
-    width: 30px;
+    left: 0px;
+    top: 22px;
+    width: 20px;
 }
 .projects-input:checked + label span:nth-child(2) {
     transform: rotate(-90deg);
     left: 15px;
-    top: 20px;
-    width: 30px;
+    top: 22px;
+    width: 20px;
 }
 video {
     z-index: 1;
@@ -86,6 +86,9 @@ video {
 .projects-input:checked ~ video {
     display:block;
 }
+.projects-input:checked ~ .projects-image {
+    display: none;
+}
 /* Following stuff */
 .projects-element h3 {
     font-size: 20px;
@@ -95,6 +98,7 @@ video {
 }
 .projects-element img {
     transition: 0.5s;
+    border-radius: 10px;
 }
 .projects-image:hover img {
     opacity: 0.4;
@@ -105,7 +109,7 @@ video {
     margin-left: -30px;
     font-size: 15px;
     position: absolute;
-    top: 150px;
+    top: 45%;
     opacity: 0;
 }
 

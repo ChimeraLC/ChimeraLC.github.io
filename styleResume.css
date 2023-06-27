@@ -16,9 +16,9 @@
     */
 
     /* Discord style  */
-    --background-dark-color:#272934;
+    --background-dark-color:#1d1d21;
     --text-dark-color:#f2f4fb;
-    --text-dark-color2:#9195ab;
+    --text-dark-color2:#c7c9d2;
     --text-dark-highlight:#2c65ab;
     --text-dark-expand:#2f3237;
 
@@ -152,7 +152,7 @@ body.dark-mode .resume-expand {
     margin-top: 40px;
     margin-bottom: 15px;
     width: 70%; 
-    opacity: 0.5;
+    opacity: 0.2;
 }
 /* Click for more info markers */
 .resume .resume-input {
@@ -182,6 +182,10 @@ body.dark-mode .resume-expand {
     width: 10px;
     height: 50px;
     left: 20px;
+}
+.resume-expandable label:hover {
+    
+    cursor: pointer;
 }
 .resume-expandable label:hover span {
     transform: rotate(-10deg);

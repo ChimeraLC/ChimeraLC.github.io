@@ -17,33 +17,114 @@
 
 .projects-element {
     position: relative;
-    height: 275px
+    min-height: 275px;
 }
-/* First line */
+.projects-desc {
+    position: relative;
+    display: block;
+    left: 10%;
+    width: 40%;
+}
+/* first line */
+.projects-desc h2 {
+    font-size: 35px;
+}
+
+/* Description */
+.projects-desc h3 {
+    font-size: 20px;
+    padding-left: 15px;
+    margin-top: -20px;
+    font-weight: normal;
+}
+/* First line 
 .projects-element h2 {
     display: inline;
     font-size: 35px;
-    padding-left: 10%;
 }
+*/
 
 /* More info markers */
+.projects-info {
+    display: none;
+}
+.projects .info-label {
+    width: 40px;
+    height: 30px;
+    display: block;
+    background-color:rgba(8, 140, 255, 0);
+    left: 10%;
+    position: relative;
+}
+.projects-expand {
+    position: relative;
+    height: 1px;
+    overflow: hidden;
+    transition: height 0.5s ease-out;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    width: 50%;
+    left: 10%;
+    background-color:var(--text-dark-expand);
+    border-radius: 2px;
+}
+
+.projects-info:checked ~.projects-expand {
+    height: 200px;
+    
+    transition: height 1.5s;
+}
+.projects-info:checked + label{
+    background-color:antiquewhite
+}
+.projects .info-label span:nth-child(1){
+    position: absolute;
+    background-color: white;
+    transform: rotate(45deg);
+    width: 20px;
+    height: 8px;
+    top: 12px;
+    left: 6px;
+    transition: 1s;
+}
+.projects .info-label span:nth-child(2){
+    
+    position: absolute;
+    background-color: white;
+    transform: rotate(-45deg);
+    top: 12px;
+    left: 15px;
+    width: 20px;
+    height: 8px;
+    transition: 1s;
+}
+
+.projects-info:checked ~.info-label span:nth-child(1) {
+    transform: rotate(-45deg);
+    width: 20px;
+}
+.projects-info:checked ~.info-label span:nth-child(2) {
+    transform: rotate(45deg);
+    width: 20px;
+}
+/* Video display markers */
 .projects-input {
     display: none;
 }
 
-.projects label {
+.projects .video-label {
     width: 40px;
     height: 50px;
-    display: inline-block;
+    display: block;
     background-color:rgba(8, 140, 255, 0);
-    left:15px;
-    position: relative;
-    top: 15px;
+    left: 50%;
+    position: absolute;
+    top: -0px;
 }
-.projects label:hover {
+.projects .video-label:hover {
     cursor: pointer;
 }
-.projects label span:nth-child(1){
+.projects .video-label span:nth-child(1){
     position: absolute;
     background-color: white;
     transform: rotate(45deg);
@@ -53,7 +134,7 @@
     left: 7px;
     transition: 0.5s;
 }
-.projects label span:nth-child(2){
+.projects .video-label span:nth-child(2){
     
     position: absolute;
     background-color: white;
@@ -64,13 +145,13 @@
     height: 8px;
     transition: 0.5s;
 }
-.projects-input:checked + label span:nth-child(1) {
+.projects-input:checked + .video-label span:nth-child(1) {
     transform: rotate(90deg);
     left: 0px;
     top: 22px;
     width: 20px;
 }
-.projects-input:checked + label span:nth-child(2) {
+.projects-input:checked + .video-label span:nth-child(2) {
     transform: rotate(-90deg);
     left: 15px;
     top: 22px;
@@ -80,7 +161,7 @@ video {
     z-index: 1;
     position: absolute;
     right: 10%;
-    top: -15px;
+    top: 0px;
     display: none;
 }
 .projects-input:checked ~ video {
@@ -89,16 +170,13 @@ video {
 .projects-input:checked ~ .projects-image {
     display: none;
 }
-/* Following stuff */
-.projects-element h3 {
-    font-size: 20px;
-    padding-left: 16%;
-    margin-top: 0px;
-    font-weight: normal;
-}
 .projects-element img {
     transition: 0.5s;
     border-radius: 10px;
+    width: 350px; 
+    height: 210px; 
+    object-fit: cover; 
+    object-position: 100% 100%;
 }
 .projects-image:hover img {
     opacity: 0.4;
@@ -106,10 +184,10 @@ video {
 .projects-image h3 {
     text-align: center;
     font-weight: normal;
-    margin-left: -30px;
+    margin-left: 30px;
     font-size: 15px;
     position: absolute;
-    top: 45%;
+    top: 40%;
     opacity: 0;
 }
 

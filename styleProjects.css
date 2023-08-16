@@ -1,3 +1,21 @@
+
+body.dark-mode .projects{
+    background-color:#89CFF0;
+}
+
+body.dark-mode .projects .info-label span {
+    background-color:#272934;
+}
+
+
+body.dark-mode .projects .video-label span {
+    background-color:#272934;
+}
+
+body.dark-mode .projects-expand {
+    background-color:rgb(78, 168, 251);
+}
+
 .projects {
     height: auto;
     background-color:#272934;
@@ -55,6 +73,11 @@
     background-color:rgba(8, 140, 255, 0);
     left: 10%;
     position: relative;
+}
+
+.projects .info-label:hover {
+
+    cursor: pointer;
 }
 .projects-expand {
     position: relative;
@@ -162,6 +185,7 @@
     position: absolute;
     right: 10%;
     top: 0px;
+    width: 350px;
     display: none;
 }
 .projects-input:checked ~ video {
@@ -207,7 +231,7 @@
     text-align: center;
     right: -25%;
     width: 30%;
-    margin-top: -20px;
+    margin-top: -0px;
 }
 .projects-element img {
     width: 450px; 
@@ -222,8 +246,9 @@
 .projects video {
     z-index: 1;
     position: relative;
-    right: -30%;
+    right: -25%;
     top: 0px;
+    width: 450px;
     display: none;
 }
 .projects-desc {

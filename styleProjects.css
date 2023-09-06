@@ -33,6 +33,14 @@ body.dark-mode .projects-expand {
     font-size: 70px;
 }
 
+/* Links within title */
+.projects a {
+    color:#ffffff;
+    transition: 0.3s;
+}
+.projects a:hover {
+    opacity: 0.7;
+}
 .projects-element {
     position: relative;
     min-height: 275px;

@@ -105,7 +105,7 @@
 -->
   <div style = "position: fixed; right: 10px;
   overflow: hidden; z-index: 2; color:rgb(205, 134, 77)">
-    <a style = "font-size: 60px;"> Under Construction</a>
+    <a style = "font-size: 40px;"> Under Construction</a>
   </div>
   <!-- Absolute placements used for jumps ----------------------------------->
   
@@ -120,7 +120,7 @@
       <div style = "white-space: nowrap;">
         <h1> Resume <span></span></h1>
 
-        <a href = "Lucas Resume.pdf" download> 
+        <a href = "Lucas Chen Resume.pdf" download> 
           <p> Get PDF</p>
           <span></span>
         </a>
@@ -184,6 +184,25 @@ Complex Analysis, Into to Math Cryptography
         
         </div>
         <div class = "resume-line">
+          <h2>Undergraduate Teaching Assistant </h2>
+          <h3>August 2023 - Present</h3>
+          <h3>Rice University</h3>
+        
+          <div class = "resume-expandable">
+            <input type="checkbox" id = "resume-expand4" class = "resume-input">
+            <label for = "resume-expand4">
+              <span></span>
+              <span></span>
+            </label>
+            <div class = "resume-expand">
+              <p>
+              I am a TA for the course COMP 382: Reasoning about Algorithms, where my responsibilities include grading exams and assignments and holding office hours.
+              </p>
+            </div>
+          </div>
+        
+        </div>
+        <div class = "resume-line">
           <h2>Mathematics Teaching Assistant </h2>
           <h3>May 2022 - August 2022</h3>
           <h3>AwesomeMath Summer Program</h3>
@@ -215,7 +234,7 @@ Complex Analysis, Into to Math Cryptography
         </div>
         <div class = "resume-line">
           <h2>Coding Languages</h2>
-          <h3>Python, Java, C, C#, HTML, Matlab, Javascript</h3>
+          <h3>Python, Java, C, C#, HTML, Matlab, Javascript, Go</h3>
         </div>
           
         </div>
@@ -252,9 +271,21 @@ Complex Analysis, Into to Math Cryptography
       
         <input type="checkbox" id = "projects-info-expand3" class = "projects-info">
         <div class = "projects-expand">
-          Info to be added here.
-          Code can be found <a href = "https://github.com/ChimeraLC/Gameboy-Emulator">
-            here
+          This program was built in C using the SDL library. It emulates the SM83 processor
+          and is designed to emulate the DMG-01 Nintendo Gameboy, so it does not support
+          color. It also currently does not yet support sound.
+          <br>
+          <br>
+          I am referring to both the <a href = "https://gbdev.io/pandocs/">
+            Pan Docs
+          </a> and the <a href = "http://marc.rawer.de/Gameboy/Docs/GBCPUman.pdf"> Game Boy
+            CPU Manual
+          </a>, which have been very helpful during development.
+          <br>
+          <br>
+
+          Code for this project can be found <a href = "https://github.com/ChimeraLC/Gameboy-Emulator">
+            here.
           </a>
         </div>
         <label class = "info-label" for = "projects-info-expand3">
@@ -292,9 +323,21 @@ Complex Analysis, Into to Math Cryptography
         
         <input type="checkbox" id = "projects-info-expand1" class = "projects-info">
         <div class = "projects-expand">
-          Info to be added here.
-          Code can be found <a href = "https://github.com/ChimeraLC/TTT-VIdeo-Solver">
-            here
+          This program was built in Python using OpenCV and TensorFlow. When clearly drawn
+          tic tac toe boards are shown to the webcam, it will detect the board,
+          figure out the board state, and overlay the best possible move for the current
+          player on the webcame footage.
+
+          <br>
+          <br>
+          Due to the limited number of 'x' and 'o' images used for image recognition model,
+          the program is somewhat inaccurate in detecting the board state, but I believe that,
+          given a larger dataset to train on, the pogram would be more accurate.
+
+          <br>
+          <br>
+          Code for this project can be found <a href = "https://github.com/ChimeraLC/TTT-VIdeo-Solver">
+            here.
           </a>
         </div>
         
@@ -336,9 +379,8 @@ Complex Analysis, Into to Math Cryptography
         
         <input type="checkbox" id = "projects-info-expand2" class = "projects-info">
         <div class = "projects-expand">
-          Info to be added here.
-          Code can be found <a href = "https://github.com/ChimeraLC/WindowPhysics">
-            here
+          Code for this project can be found <a href = "https://github.com/ChimeraLC/WindowPhysics">
+            here.
           </a>
         </div>
         <label class = "info-label" for = "projects-info-expand2">

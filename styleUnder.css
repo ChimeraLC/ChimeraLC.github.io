@@ -149,10 +149,10 @@ body.dark-mode .sticky {
   color: #f1f1f1;
   cursor: pointer;
 }
-.filler.mobile-mode {
+body.mobile-mode .filler {
   height: 100vh;
 }
-.sticky.mobile-mode {
+body.mobile-mode .sticky {
   position: relative;
 }
 /* On screens that are less than 500px high, change orientation*/

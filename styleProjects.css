@@ -238,8 +238,8 @@ body.dark-mode .projects-expand {
 .projects-image {
     position: relative;
     text-align: center;
-    right: -25%;
-    width: 30%;
+    width: 100%;
+    left: 0%;
     margin-top: -0px;
 }
 .projects-element img {

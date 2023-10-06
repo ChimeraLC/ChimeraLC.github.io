@@ -255,9 +255,10 @@ body.dark-mode .projects-expand {
 .projects video {
     z-index: 1;
     position: relative;
-    right: -25%;
-    top: 0px;
     width: 450px;
+    text-align: center;
+    margin: auto;
+    left: 0%;
     display: none;
 }
 .projects-desc {

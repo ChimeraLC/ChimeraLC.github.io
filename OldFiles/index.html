@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Lucas Chen's Website </title>
+    <link rel="stylesheet" href="styleCover.css">
+    <link rel="stylesheet" href="styleUnder.css">
+    <link rel="stylesheet" href="styleResume.css">
+    <link rel="stylesheet" href="styleProjects.css">
+    <style>
+      /* width */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #d3d3d3; 
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888; 
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=0.75" />
+
+</head>
+<body>
+  <!-- Initial script -->
+  <script>
+      window.mobileAndTabletCheck = function() {
+      let check = false;
+      (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+      if (check) {
+        var element = document.body;
+         element.classList.toggle("mobile-mode");
+      }
+    };
+    window.mobileAndTabletCheck();
+  </script>
+  
+  <div class = "mainCover" id = "about">
+    <!-- Navigation bar-->
+    <div class="topnav" id = "topnav">
+      <a><br> </a>
+      <a href="#about"><b>About</b></a>
+      <a href="#resume"><b>Resume</b></a>
+      <a href="#projects2"><b>Projects</b></a>
+    </div>
+    <!-- Main content-->
+    <div class="mainTitle">
+      <p style="display: inline-block; font-size:25px; margin-bottom:-5px;">Welc</p>
+      <label class="switch">
+        <input type="checkbox" id = "darkmode-toggle">
+        <span class="slider round"></span>
+      </label>
+    <p style="display: inline-block; font-size:25px; margin-left: -4px; margin-bottom:-5px;">me, my name is</p>
+      <h1 style="font-size:50px; margin-bottom:-5px;  margin-top:-10px;"><b>Lucas Chen.</b></h1>
+      <a href = "mailto: lyc1@rice.edu" id = "emailLink">
+        <h2 style="font-size:15px; margin-top:0;">lyc1@rice.edu</h2>
+      </a>
+      <p style="font-size:12px; margin-top:-10px; width: 100%">
+        I'm a senior at Rice University majoring in computer science 
+        and mathematics.
+      </p>
+      <!-- Icon links -->
+      <div style = "white-space:nowrap">
+      <a href = "https://github.com/ChimeraLC">
+        <div class = "figure">
+          <img src= "githubIcon.png">
+        </div>
+      </a>
+      <a href = "https://www.linkedin.com/in/lucas-chen314/">
+        <div class = "figure" style = "background-color:#0077b5;">
+          <img src= "linkedinIcon.png">
+        </div>
+      </a>
+      
+      <a href = "https://chimeralc.itch.io/">
+        <div class = "figure" style = "background-color:#da3d4e;">
+          <img src= "itchIoIcon.png">
+        </div>
+      </a>
+      <a href = "https://www.deviantart.com/chimeralc">
+        <div class = "figure" style = "background-color:#0fd054;">
+          <img src= "deviantartIcon.png">
+        </div>
+      </a>
+      </div>
+    </div>
+    <!-- Scroll Recomendation-->
+    <div class = "mainScroll">
+      Scroll for more
+      <hr style="width: 20%; height:2px;border-width:0;color:rgba(128, 128, 128, 0.285);background-color:rgba(128, 128, 128, 0.26)">
+    </div>
+    <!-- Image-->
+    <div class = "mainImage">
+      <img src = "profile.jpg">
+    </div>
+  </div>  
+  <!-- Content underneath -->
+  
+  <input type="checkbox" id = "sidebar-button">
+
+  <label for = "sidebar-button"> 
+    <span class="sidebar-line"></span>
+    <span class="sidebar-line"></span>
+    <span class="sidebar-line"></span>
+  </label>
+
+  <div class = "sidebar">
+    <div style="height: 80px"></div>
+    <a href="#about"><b>About</b></a>
+    <a href="#resume"><b>Resume</b></a>
+    <a href="#projects"><b>Projects</b></a>
+    
+  </div>
+
+  <!-- Under Construction 
+
+  <div style = "position: fixed; right: 10px;
+  overflow: hidden; z-index: 2; color:rgb(205, 134, 77)">
+    <a style = "font-size: 40px;"> Under Construction</a>
+  </div>
+-->
+  <!-- Absolute placements used for jumps ----------------------------------->
+  
+  <div id = "resume" style = "position: absolute; top: 100vh;"></div>
+
+  <!-- Following content-->
+  <div class = "filler"> </div>
+  <div class = "sticky" id = "under">
+    <!-- Resume -->
+    <div class = "resume">
+      <!-- Top elements -->
+      <div style = "white-space: nowrap;">
+        <h1> Resume <span></span></h1>
+
+        <a href = "Lucas Chen Resume.pdf" download> 
+          <p> Get PDF</p>
+          <span></span>
+        </a>
+      </div>
+      <!-- Education -->
+      <div class = "resume-element">
+        <div class = "resume-label">
+          <h2>Education</h2>
+        </div>
+        <div class = "resume-line">
+          <h2>Rice University</h2>
+          <h3>August 2021 - May 2025 (Expected)</h3>
+          <h3>Computer Science and Mathematics Major, 3.989/4.0 GPA</h3>
+          <div class = "resume-expandable">
+            <input type="checkbox" id = "resume-expand1" class = "resume-input">
+            <label for = "resume-expand1">
+              <span></span>
+              <span></span>
+            </label>
+            <div class = "resume-expand">
+              <p>
+              Completed Coursework: <br>
+              Fundamentals of Computer Engineering, Computational Thinking,
+Probability and Statistics, Reasoning about Algorithm, Introduction to Program Design,
+Matrix Analysis for Data Science, Algorithmic Thinking,
+Honors Calculus, Honors Linear Algebra
+Introduction to Computer Systems, Fundamentals of Parallel Programming,
+Complex Analysis, Intro to Math Cryptography
+              </p>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+
+      <hr>
+      <!-- Experience -->
+      <div class = "resume-element">
+        <div class = "resume-label">
+          <h2>Experience</h2>
+        </div>
+        <div class = "resume-line">
+          <h2>Undergraduate Research Assistant </h2>
+          <h3>May 2023 - Present</h3>
+          <h3>Rice D2K Lab</h3>
+        
+          <div class = "resume-expandable">
+            <input type="checkbox" id = "resume-expand3" class = "resume-input">
+            <label for = "resume-expand3">
+              <span></span>
+              <span></span>
+            </label>
+            <div class = "resume-expand">
+              <p>
+                Working with graduate researchers at the Rice Data to Knowledge Lab with research and development involving time series prediction and anomaly detection.
+              </p>
+            </div>
+          </div>
+        
+        </div>
+        <div class = "resume-line">
+          <h2>Engineering Intern </h2>
+          <h3>May 2024 - August 2024</h3>
+          <h3>Gravity Well</h3>
+        
+          <div class = "resume-expandable">
+            <input type="checkbox" id = "resume-expand3" class = "resume-input">
+            <label for = "resume-expand3">
+              <span></span>
+              <span></span>
+            </label>
+            <div class = "resume-expand">
+              <p>
+                Developed and built upon a variety of different features for an unannounced video game title.
+              </p>
+            </div>
+          </div>
+        
+        </div>
+        <div class = "resume-line">
+          <h2>Undergraduate Teaching Assistant </h2>
+          <h3>August 2023 - Present</h3>
+          <h3>Rice University</h3>
+        
+          <div class = "resume-expandable">
+            <input type="checkbox" id = "resume-expand4" class = "resume-input">
+            <label for = "resume-expand4">
+              <span></span>
+              <span></span>
+            </label>
+            <div class = "resume-expand">
+              <p>
+              I am a TA for the course COMP 382: Reasoning about Algorithms, where my responsibilities include grading exams and assignments and holding office hours.
+              </p>
+            </div>
+          </div>
+        
+        </div>
+        <div class = "resume-line">
+          <h2>Mathematics Teaching Assistant </h2>
+          <h3>May 2022 - August 2022</h3>
+          <h3>AwesomeMath Summer Program</h3>
+        
+          <div class = "resume-expandable">
+            <input type="checkbox" id = "resume-expand2" class = "resume-input">
+            <label for = "resume-expand2">
+              <span></span>
+              <span></span>
+            </label>
+            <div class = "resume-expand">
+              <p>
+              I collaborated with an instructor to teach high-level competition-focused
+               mathematics to high school students, which involved teaching classes, grading assignments,
+               and tracking student progress.
+               </p>
+            </div>
+          </div>
+        
+        </div>
+
+      </div>
+
+      <hr>
+      <!-- Skills -->
+      <div class = "resume-element">
+        <div class = "resume-label">
+          <h2>Skills</h2>
+        </div>
+        <div class = "resume-line">
+          <h2>Coding Languages</h2>
+          <h3>Python, Java, C, C#, HTML, Matlab, JavaScript, Go</h3>
+        </div>
+          
+        </div>
+    
+        <!-- Extra padding-->
+        <div style = "height: 100px"></div>
+
+    </div>
+    
+
+    <!-- Absolute placement for jumps (incomplete) ----------------------->
+    <!-- Projects -->
+    <div id = "projects" style = "position: absolute;"></div>
+    <!-- Needs fix -->
+    <div class = "projects">
+      <h1>Projects</h1>
+      <div id = "projects2" style = "position: relative; top: 100vh;"></div>
+
+      
+      <div class = "projects-element">
+        
+        <div class = "projects-desc">
+          <h2> Gameboy Emulator</h2>
+          <h3>
+              A program that emulates a Nintendo Gameboy.
+          </h3>
+        </div>
+        <input type="checkbox" id = "projects-expand3" class = "projects-input">
+        
+        <label  class = "video-label" for = "projects-expand3">
+          <span></span>
+          <span></span>
+        </label>
+      
+        <input type="checkbox" id = "projects-info-expand3" class = "projects-info">
+        <div class = "projects-expand">
+          This program was built in C using the SDL library. It emulates the SM83 processor
+          and is designed to emulate the DMG-01 Nintendo Gameboy, so it does not support
+          color. It currently only supports the MBC1 and MBC3 ROM Banking types, and does not yet support sound.
+          <br>
+          <br>
+          I am referring to both the <a href = "https://gbdev.io/pandocs/">
+            Pan Docs
+          </a> and the <a href = "http://marc.rawer.de/Gameboy/Docs/GBCPUman.pdf"> Game Boy
+            CPU Manual
+          </a>, which have been very helpful during development.
+          <br>
+          <br>
+
+          Code for this project can be found <a href = "https://github.com/ChimeraLC/Gameboy-Emulator">
+            here.
+          </a>
+        </div>
+        <label class = "info-label" for = "projects-info-expand3">
+          <span></span>
+          <span></span>
+        </label>
+
+        
+        <video controls autoplay muted>
+          <source src="vid-emulator.mp4" type="video/mp4">
+        </video>
+
+        <div class = "projects-image">
+            <h3> https://github.com/ChimeraLC/Gameboy-Emulator</h3>
+            <a href = "https://github.com/ChimeraLC/Gameboy-Emulator">
+            <img src="img-emulator.jpg" alt="Project Image">
+          </a>
+        </div>
+
+      </div>
+
+
+        <div class = "projects-element">
+        
+          <div class = "projects-desc">
+            <h2> Ray Tracer</h2>
+            <h3>
+              A ray tracing program in C.
+            </h3>
+          </div>
+          <input type="checkbox" id = "projects-expand-ray" class = "projects-input">        
+          <input type="checkbox" id = "projects-info-expand-ray" class = "projects-info">
+          <div class = "projects-expand">
+            This program was built in C using only the standard libraries.
+            It is currently capable of rendering 3D scenes with simplistic shadows, 
+            reflections, and anti-aliasing. It writes outputs to a bitmap file.
+            <br>
+            <br>
+            
+          Code for this project can be found <a href = "https://github.com/ChimeraLC/RayTracing">
+            here.
+
+            </a>
+          </div>
+          <label class = "info-label" for = "projects-info-expand-ray">
+            <span></span>
+            <span></span>
+          </label>
+  
+          <div class = "projects-image">
+              <h3> https://github.com/ChimeraLC/RayTracing</h3>
+              <a href = "https://github.com/ChimeraLC/RayTracing">
+              <img src="img-raytracing.jpeg" alt="Project Image">
+            </a>
+          </div>
+
+        </div>
+
+        <div class = "projects-element">
+        
+          <div class = "projects-desc">
+            <h2> Piranesi</h2>
+            <h3>
+                An OpenGL project simulating infinite landscapes.
+            </h3>
+          </div>
+          <input type="checkbox" id = "projects-expand7" class = "projects-input">
+          
+          <label  class = "video-label" for = "projects-expand7">
+            <span></span>
+            <span></span>
+          </label>
+        
+          <input type="checkbox" id = "projects-info-expand7" class = "projects-info">
+          <div class = "projects-expand">
+            This program was built in C++ using OpenGL.
+  
+            Code for this project can be found <a href = "https://github.com/ChimeraLC/Piranesi">
+              here.
+            </a>
+          </div>
+          <label class = "info-label" for = "projects-info-expand7">
+            <span></span>
+            <span></span>
+          </label>
+  
+          
+          <video controls autoplay muted>
+            <source src="vid-piranesi.mp4" type="video/mp4">
+          </video>
+  
+          <div class = "projects-image">
+              <h3> https://github.com/ChimeraLC/Piranesi</h3>
+              <a href = "https://github.com/ChimeraLC/Piranesi">
+              <img src="img-piranesi.png" alt="Project Image">
+            </a>
+          </div>
+  
+        </div>
+
+      <div class = "projects-element">
+        <div class = "projects-desc">
+        <h2> 
+          Tic-Tac-Toe Webcam Solver</h2>
+          <h3> 
+            A program that detects valid tic-tac-toe grids in webcam footage and recommends next moves.
+          </h3>
+
+        </div>
+        <input type="checkbox" id = "projects-expand1" class = "projects-input">
+        <label class = "video-label" for = "projects-expand1">
+          <span></span>
+          <span></span>
+        </label>
+
+        
+        <input type="checkbox" id = "projects-info-expand1" class = "projects-info">
+        <div class = "projects-expand">
+          This program was built in Python using OpenCV and TensorFlow. When clearly drawn
+          tic-tac-toe boards are shown to the webcam, it will detect the board,
+          figure out the board state, and overlay the best possible move for the current
+          player on the webcame footage.
+
+          <br>
+          <br>
+          Due to the limited number of 'x' and 'o' images used for image recognition model,
+          the program is somewhat inaccurate in detecting the board state, but I believe that,
+          given a larger dataset to train on, the program would be more accurate.
+
+          <br>
+          <br>
+          Code for this project can be found <a href = "https://github.com/ChimeraLC/TTT-VIdeo-Solver">
+            here.
+          </a>
+        </div>
+        
+        <label class = "info-label" for = "projects-info-expand1">
+          <span></span>
+          <span></span>
+        </label>
+
+        <video controls autoplay muted>
+          <source src="vid-tictactoe.mp4" type="video/mp4">
+        </video>
+        
+      
+
+        
+        <div class = "projects-image">
+          <h3> https://github.com/ChimeraLC/TTT-Video-Solver</h3>
+          <a href = "https://github.com/ChimeraLC/TTT-VIdeo-Solver">
+          <img src="img-tictactoe.png" alt="Project Image">
+        </a>
+        </div>
+      </div>
+
+
+
+
+      <div class = "projects-element">
+        
+        <div class = "projects-desc">
+          <h2> Windowed Physics Simulator</h2>
+          <h3>
+              A physics simulator that also takes into account the position and borders of the window on the screen.
+          </h3>
+        </div>
+        <input type="checkbox" id = "projects-expand2" class = "projects-input">
+        <label  class = "video-label" for = "projects-expand2">
+          <span></span>
+          <span></span>
+        </label>
+        
+        <input type="checkbox" id = "projects-info-expand2" class = "projects-info">
+        <div class = "projects-expand">
+          Code for this project can be found <a href = "https://github.com/ChimeraLC/WindowPhysics">
+            here.
+          </a>
+        </div>
+        <label class = "info-label" for = "projects-info-expand2">
+          <span></span>
+          <span></span>
+        </label>
+
+        <video controls autoplay muted>
+          <source src="vid-windowPhysics.mp4" type="video/mp4">
+        </video>
+
+        <div class = "projects-image">
+            <h3> https://github.com/ChimeraLC/WindowPhysics</h3>
+            <a href = "https://github.com/ChimeraLC/WindowPhysics">
+            <img src="img-windowphysics.png" alt="Project Image">
+          </a>
+        </div>
+
+      </div>
+        
+      <div class = "projects-element">
+        
+        <div class = "projects-desc">
+          <h2> WikiGuess</h2>
+          <h3>
+              A "game" involving guessing Wikipedia pages based on contained words.
+          </h3>
+        </div>
+        <input type="checkbox" id = "projects-expand2" class = "projects-input">
+        <!--
+        <label  class = "video-label" for = "projects-expand2">
+          <span></span>
+          <span></span>
+        </label>
+        -->
+        <input type="checkbox" id = "projects-info-expand5" class = "projects-info">
+        <div class = "projects-expand">
+          The "game" involves one user connecting to another via winsocket and
+          guessing words, getting a response if they guess a word contained in a
+          given Wikipedia page. Upon guessing the wikipedia page title, they "win."
+          <br>
+          <br>
+
+          This program uses the winsock and libcurl libraries and was developed using socket programming and bloom filters.
+
+          <br>
+          <br>
+          Code for this project can be found <a href = "https://github.com/ChimeraLC/WikiGuess">
+            here.
+          </a>
+        </div>
+        <label class = "info-label" for = "projects-info-expand5">
+          <span></span>
+          <span></span>
+        </label>
+          <!--
+        <video controls autoplay muted>
+          <source src="" type="video/mp4">
+        </video>
+-->
+        <div class = "projects-image">
+            <h3> https://github.com/ChimeraLC/WikiGuess</h3>
+            <a href = "https://github.com/ChimeraLC/WikiGuess">
+            <img src="img-wikiguess.jpg" alt="Project Image">
+          </a>
+        </div>
+
+      </div>
+      
+
+
+        <!-- Extra padding-->
+        <div style = "height: 200px"></div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <!-- Script elements-->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var checkbox = document.getElementById("darkmode-toggle");
+
+      checkbox.addEventListener('change', function () {
+        toggleMode();
+      });
+    });
+    function toggleMode() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
+</body>
+</html>

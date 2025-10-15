@@ -1,0 +1,63 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+.mainCover {
+    position: absolute;
+    width: 100vw;
+    max-width: 100%;
+    height: 100%; 
+    background-color:#f7ecec;
+    left: 0;
+    top: 0;
+    display: table;
+}
+
+.mainCover .centerElement {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.mainCover .row {
+  display: table-row;
+}
+
+.mainCover .bottomElement {
+    display: table-cell;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.mainCover p {
+    margin-top: -2vw; /* Shift it up a bit */
+    font-size: 20pt;
+    margin-bottom: 5px; /* Icons closer vertically */
+}
+
+/* Clickable icons */
+.mainCover a {
+  text-decoration: none;
+    padding: 10px;
+}
+.mainCover .figure{
+    display:inline-block;
+    width:35px;
+    height: 35px;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+    background-color: #474747;
+    line-height: 1.7em;
+    text-decoration: none;
+}
+.mainCover .figure:hover {
+    opacity: 0.7;
+}
+.mainCover .figure img{
+    position: relative;
+   width: 18px;
+    height: auto;
+    top: -3px;
+}

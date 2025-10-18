@@ -1,0 +1,13 @@
+:root {
+    --night-color: #0f0f0f
+}
+
+[data-theme="light"] {
+  --background-color:#f7ecec;
+  --text-color: #000000;
+}
+
+[data-theme="dark"] {
+  --background-color: var(--night-color);
+  --text-color:#f7ecec;
+}

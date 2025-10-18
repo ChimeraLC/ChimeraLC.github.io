@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme = "light">
   <head>
     <title> Lucas Chen</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lucas' Website</title>
+    <link rel="stylesheet" href="./styleColor.css">
     <link rel="stylesheet" href="./styleMain.css">
     <link rel="stylesheet" href="./styleUnder.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
@@ -19,7 +20,14 @@
     <div class = "row">
     <div class = "centerElement">
 
-      <p>Hi, I'm Lucas</p>
+      <p>Hell
+      <label class="switch", style = "margin-left: -5px; top: 16px; margin-right: -3px;">
+        <input type="checkbox" id = "darkmode-toggle">
+        <span class="slider" id = "outer"></span>
+        <span class="slider" id = "inner"></span>
+         </input> 
+      </label>, I'm Lucas</p>
+    
 
       <!-- Link Icons -->
       <div style = "white-space:nowrap">
@@ -55,6 +63,26 @@
     </div>
   </div>
   </div>
+
+
+
+
+
+
+  <!-- Script elements-->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var checkbox = document.getElementById("darkmode-toggle");
+
+      checkbox.addEventListener('change', function () {
+        toggleMode();
+      });
+    });
+    function toggleMode() {
+        var checkbox = document.getElementById("darkmode-toggle");
+        document.querySelector("html").setAttribute("data-theme", checkbox.checked ? "dark" : "light");
+    }
+    </script>
 </body>
 
 </html>

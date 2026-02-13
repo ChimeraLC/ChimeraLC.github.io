@@ -69,25 +69,6 @@ html {
     transition: width
 }
 
-/* Top navigation bar */
-.topnav {
-    background-image: linear-gradient(#4d4d4d7d, #170a1800);
-    width: 100%;
-    height: 100px;
-    white-space: nowrap;
-  }
-.topnav a {
-    color: #606060;
-    text-align: center;
-    padding-left: 30px;
-    text-decoration: none;
-    font-size: 20px;
-    transition: 0.2s;
-}
-.topnav a:hover {
-    color: #ffffff;
-}
-
 /* Clickable icons */
 .figure{
     display:inline-block;

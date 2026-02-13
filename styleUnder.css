@@ -1,0 +1,64 @@
+.underCover {
+    position: absolute;
+    margin-top: 100vh;
+    margin-left: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--background-color);
+    transition: background-color 0.5s, color 0.5s;
+    -webkit-transition: background-color 0.5s, color 0.5s;
+    color: var(--text-color);
+}
+
+.underContent {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    min-height: 20vh;
+
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+
+    background: var(--background-color-under);
+    transition: background-color 0.5s, color 0.5s;
+    -webkit-transition: background-color 0.5s, color 0.5s;
+    color: var(--text-color);
+}
+
+.underContent section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.underContent .major {
+    display: flex;
+    flex-grow: 2;
+    padding: 60px;
+
+    font-size: 30pt;
+}
+
+.underContent .minor {
+    display: flex;
+    flex-grow: 1;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 40px;
+}
+

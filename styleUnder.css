@@ -17,16 +17,20 @@
 }
 
 .underContent {
-    margin-top: 50px;
+    margin-top: 0px;
     margin-bottom: 20px;
     min-height: 20vh;
+
+    padding-bottom: 3%;
 
     display: flex;
     justify-content: center;
     text-align: left;
-    width: 80%;
+    width: 90%;
     border-radius: 10px;
     border: 1px solid var(--border-color);
+
+    flex-direction: column;
 
     background: var(--background-color-under);
     transition: background-color 0.5s, color 0.5s;
@@ -34,11 +38,14 @@
     color: var(--text-color);
 }
 
+.underContent a {
+    text-decoration: none;
+}
+
 .underContent section {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 3vh;
 
     display: flex;
     flex-direction: row;
@@ -46,19 +53,85 @@
     text-align: left;
 }
 
+@media screen and (max-width: 800px) {
+    .underContent section {
+        flex-direction: column;
+    }
+}
+
+
+.underContent .maxum {
+    padding-left: 60px;
+    padding-right: 60px;
+
+    flex-grow: 5;
+
+    text-align: center;
+}
+
+.underContent .maxum h1 {
+    font-size: 30pt;
+    margin-bottom: -10px;
+}
+
 .underContent .major {
     display: flex;
     flex-grow: 2;
-    padding: 60px;
+    flex: 2;
 
-    font-size: 30pt;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.underContent .majorRight {
+    display: flex;
+    flex-grow: 2;
+    flex: 2;
+
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+}
+
+.underContent .majorRight p {
+    font-size: 25pt;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.underContent .major h1 {
+    font-size: 25pt;
+    margin-bottom: 10px;
+}
+
+.underContent .major p {
+    font-size: 15pt;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 .underContent .minor {
     display: flex;
+    flex: 1;
     flex-grow: 1;
-    margin-left: 40px;
-    margin-right: 40px;
-    padding: 40px;
+
+    align-items: flex-start;
 }
 
+.underContent .minor img {
+    width: 100%;
+}
+
+.underContent .minor .colorImg {
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+
+    margin: 5%;
+}
+
+.footer {
+    margin: 0;
+    opacity: 0.2;
+    position: absolute;
+    bottom: 0;
+}

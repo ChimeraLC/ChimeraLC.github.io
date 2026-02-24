@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lucas' Website</title>
+    <title>Chimeral Sea</title>
     <link rel="stylesheet" href="./styleColor.css">
     <link rel="stylesheet" href="./styleMain.css">
     <link rel="stylesheet" href="./styleUnder.css">
@@ -13,6 +13,8 @@
   </head>
 
   <body>
+
+  <!-- TODO: Zooming font sizes-->
 
   <!-- Main Page w/ exit links -->
   <div class="mainCover">
@@ -70,17 +72,73 @@
 
       <section id = "about"> 
         <div class = "major">
-        Hello 
+          <h1>About Me</h1>
+          <br>
+          <p>As a child, I enjoyed playing video games; 
+            it seems that's followed me into adulthood. </p>
+          <p>I'm a software engineer working on video games and writing code that
+            usually doesn't break.
+          </p>
+          <p>Currently, I'm a junior engineer at <a href = "https://gravitywell.games/">Gravity Well</a>.</p>
         </div>
 
         <div class = "minor">
-          Image goes here
+          <img src="icons/ChimeralSeaIcon.png">
         </div>
       </section>
       
-    </div>
-  </div>
+      <section id = "projects">
+        <div class = "maxum">
+          <h1> Some Things I've Worked On </h1>
+        </div>
+      </section>
 
+      <!-- <section id = "projects">
+        <div class = "maxum">
+          <h1> Things I've Worked On (Unprofessionally) </h1>
+        </div>
+      </section> -->
+
+      <section id = "art">
+        <div class = "maxum">
+          <h1> Some Other Things I've Worked On </h1>
+        </div>
+      </section>
+
+      <section id = "artLineOne">
+        <div class = "minor">
+          <img class = "colorImg" src="icons/art/art_digitalhorns.png">
+        </div>
+
+        <div class = "majorRight">
+          <p> One of my hobbies is drawing</p>
+        </div>
+      </section>
+
+      <section id = "artLineTwo">
+        <div class = "minor">
+          <img class = "colorImg"  src="icons/art/art_digitalbones.png">
+        </div>
+        <div class = "minor">
+          <img class = "colorImg"  src="icons/art/art_digitalbug.png">
+        </div>
+        <div class = "minor">
+          <img class = "colorImg"  src="icons/art/art_pencilbug.jpg">
+        </div>
+        <div class = "minor">
+          <img class = "colorImg"  src="icons/art/art_pencileyes.jpg">
+        </div>
+      </section>
+<!-- 
+      <section id = "blogs">
+        <div class = "maxum">
+          <h1> Things I've Yapped About </h1>
+        </div>
+      </section> -->
+    </div>
+    
+    <div class="footer">This website was coded (poorly) by me</div>
+  </div>
 
   <!-- Script elements-->
   <script>
@@ -95,6 +153,10 @@
         var checkbox = document.getElementById("darkmode-toggle");
         document.querySelector("html").setAttribute("data-theme", checkbox.checked ? "dark" : "light");
     }
+
+    // For applying on startup
+    var checkbox = document.getElementById("darkmode-toggle");
+    document.querySelector("html").setAttribute("data-theme", checkbox.checked ? "dark" : "light");
     </script>
 </body>
 

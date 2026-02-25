@@ -54,7 +54,7 @@
 }
 
 @media screen and (max-width: 800px) {
-    .underContent section {
+    .underContent .columnable {
         flex-direction: column;
     }
 }
@@ -93,10 +93,28 @@
     flex-direction: column;
 }
 
+.underContent .majorRight h {
+    font-size: 30pt;
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+
+.underContent .majorRight h2 {
+    font-size: 24pt;
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
 .underContent .majorRight p {
-    font-size: 25pt;
+    font-size: 15pt;
     margin-top: 0px;
     margin-bottom: 10px;
+    width: 80%;
 }
 
 .underContent .major h1 {
@@ -114,19 +132,57 @@
     display: flex;
     flex: 1;
     flex-grow: 1;
+    flex-direction: column;
 
     align-items: flex-start;
 }
 
-.underContent .minor img {
+.underContent .minor p {
+    text-align: center;
     width: 100%;
+
+    margin-top: -10px;
+}
+
+.underContent .minor img {
+    width: 90%;
+    max-width: 90%;
+    margin: 5%;
 }
 
 .underContent .minor .colorImg {
     border-radius: 10px;
-    border: 1px solid var(--border-color);
+    border: 3px solid var(--border-color);
+}
 
-    margin: 5%;
+.underContent .minor a {
+    cursor: pointer;
+    align-items: left;
+    position: relative;
+}
+
+.underContent .minor a:hover .colorImg {
+    opacity: 0.2;
+}
+
+.underContent .minor a h3 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    margin-left: 10%;
+    font-size: 15px;
+    display: flex;
+    position: absolute;
+    opacity: 0;
+}
+
+.underContent .minor a:hover h3 {
+    opacity: 1;
 }
 
 .footer {

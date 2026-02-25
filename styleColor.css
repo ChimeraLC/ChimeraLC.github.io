@@ -4,10 +4,14 @@
 
 [data-theme="light"] {
   --background-color:#f7ecec;
+  --background-color-under: #d4c6cb;
+  --border-color: #b6a9ad;
   --text-color: #000000;
 }
 
 [data-theme="dark"] {
   --background-color: var(--night-color);
+  --background-color-under: #242331;
+  --border-color: #53535e;
   --text-color:#f7ecec;
 }

@@ -1,5 +1,6 @@
 
 html {
+  position: relative;
   scroll-behavior: smooth;
 }
 
@@ -7,7 +8,7 @@ html {
     position: absolute;
     width: 100vw;
     max-width: 100%;
-    height: 100%; 
+    height: 100vh; 
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background-color 0.5s, color 0.5s;
@@ -17,6 +18,12 @@ html {
     display: table;
 }
 
+.mainCover .topElement {
+
+    display: table-cell;
+    text-align: right;
+    vertical-align: bottom;
+}
 
 .mainCover .centerElement {
     text-align: center;
@@ -67,7 +74,7 @@ html {
 }
 
 /*
-* Temporary slider code
+* Slider
 */
   /* The switch - the box around the slider */
   .switch {

@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" data-theme = "light">
   <head>
-    <title> Lucas Chen</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lucas' Website</title>
+    <title>Chimeral Sea</title>
     <link rel="stylesheet" href="./styleColor.css">
     <link rel="stylesheet" href="./styleMain.css">
     <link rel="stylesheet" href="./styleUnder.css">
@@ -15,8 +14,11 @@
 
   <body>
 
+  <!-- TODO: Zooming font sizes-->
+
   <!-- Main Page w/ exit links -->
   <div class="mainCover">
+
     <div class = "row">
     <div class = "centerElement">
 
@@ -59,15 +61,145 @@
   </div>
     <div class = "row" style="height:1px;">
     <div class = "bottomElement">
-      imagine the website to be complete
+      scroll for more
     </div>
   </div>
   </div>
 
+  <!-- Undercover -->
+  <div class="underCover">
+    <div class = "underContent">
 
+      <section id = "about" class = "columnable"> 
+        <div class = "major">
+          <h1>About Me</h1>
+          <br>
+          <p>As a child, I enjoyed playing video games; 
+            it seems that's followed me into adulthood. </p>
+          <p>I'm a software engineer working on video games and writing code that
+            usually doesn't break.
+          </p>
+          <p>Currently, I'm a junior engineer at <a href = "https://gravitywell.games/">Gravity Well</a>.</p>
+        </div>
 
+        <div class = "minor">
+          <img src="icons/ChimeralSeaIcon.png">
+        </div>
+      </section>
+      
+  <!-- Code Projects -->
+      <section id = "projects">
+        <div class = "maxum">
+          <h1> Some Things I've Worked On </h1>
+        </div>
+      </section>
 
+      <section id = "projectsLineZero">
+        
+        <div class = "majorRight">
+          <h2> Stretchy Hands </h2>
+          <p> Foddian~ish game where the character's arms are controlled by constantly changing keys to swing and stretch between platforms.</p>
+        </div>
+        
+        <div class = "minor">
+            <a href = "https://chimeralc.itch.io/stretchy-hands">
+              <h3>https://chimeralc.itch.io/stretchy-hands</h3>
+              <img class = "colorImg" src="icons/projects/img-stretchy.jpg" alt="Project Image">
+            </a>
+        </div>
+      </section>
+      
+      <section id = "projectsLineOne">
+        <div class = "minor">
+            <a href = "https://github.com/ChimeraLC/Gameboy-Emulator">
+              <h3>https://github.com/ChimeraLC/Gameboy-Emulator</h3>
+              <img class = "colorImg" src="icons/projects/img-emulator.jpg" alt="Project Image">
+            </a>
+            <p>Gameboy Emulator</p>  
+        </div>
 
+        <div class = "majorRight">
+          <h2> Gameboy Emulator</h2>
+          <p> Built in C using the SDL library to emulate the the DMG-01 Nintendo Gameboy. </p>
+        </div>
+
+      </section>
+
+      <section id = "projectsLineTwo">
+        <div class = "minor">
+            <a href = "https://github.com/ChimeraLC/Piranesi">
+              <h3>https://github.com/ChimeraLC/Piranesi</h3>
+              <img class = "colorImg" src="icons/projects/img-piranesi.png" alt="Project Image">
+            </a>
+            <p>OpenGL Landscape</p>  
+        </div>
+
+        <div class = "minor">
+            <a href = "https://github.com/ChimeraLC/WindowPhysics">
+              <h3>https://github.com/ChimeraLC/WindowPhysics</h3>
+              <img class = "colorImg" src="icons/projects/img-windowphysics.png" alt="Project Image">
+            </a>
+            <p>Window-Constrained Physics Simulator</p>  
+        </div>
+
+        <div class = "minor">
+            <a href = "https://github.com/ChimeraLC/RayTracing">
+              <h3>https://github.com/ChimeraLC/RayTracing</h3>
+              <img class = "colorImg" src="icons/projects/img-raytracing.jpeg" alt="Project Image">
+            </a>
+            <p>RayTracing Renderer</p>  
+        </div>
+      </section>
+
+      <!-- <section id = "projects">
+        <div class = "maxum">
+          <h1> Things I've Worked On (Unprofessionally) </h1>
+        </div>
+      </section> -->
+
+  <!-- Other Projects -->
+      <section id = "art">
+        <div class = "maxum">
+          <h1> Some Other Things I've Worked On </h1>
+        </div>
+      </section>
+
+      <section id = "artLineOne">
+        <div class = "minor">
+          <img class = "colorImg" src="icons/art/art_digitalhorns.png">
+        </div>
+
+        <div class = "majorRight">
+          <h> One of my hobbies is drawing</h>
+          <p> Mainly a mix of digital sketches and pencil drawings in a genre that has been described as "kind of weird."</p>
+          <p> They're collected under my <a href = "https://www.deviantart.com/chimeralc">DeviantArt</a>.</p>
+        </div>
+      </section>
+
+      <section id = "artLineTwo">
+        <div class = "minor">
+          <img class = "colorImg"  src="icons/art/art_digitalbug.png">
+        </div>
+        <div class = "minor">
+          <img class = "colorImg"  src="icons/art/art_digitalbones.png">
+        </div>
+        <div class = "minor">
+          <img class = "colorImg"  src="icons/art/art_pencilbug.jpg">
+        </div>
+        <div class = "minor">
+          <img class = "colorImg"  src="icons/art/art_pencileyes.jpg">
+        </div>
+      </section>
+<!-- 
+      <section id = "blogs">
+        <div class = "maxum">
+          <h1> Things I've Yapped About </h1>
+        </div>
+      </section> -->
+    </div>
+    
+    <div class="footer">This website was coded (poorly) by me</div>
+  </div>
 
   <!-- Script elements-->
   <script>
@@ -82,6 +214,10 @@
         var checkbox = document.getElementById("darkmode-toggle");
         document.querySelector("html").setAttribute("data-theme", checkbox.checked ? "dark" : "light");
     }
+
+    // For applying on startup
+    var checkbox = document.getElementById("darkmode-toggle");
+    document.querySelector("html").setAttribute("data-theme", checkbox.checked ? "dark" : "light");
     </script>
 </body>
 

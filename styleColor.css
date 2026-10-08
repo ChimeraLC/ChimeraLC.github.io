@@ -3,8 +3,8 @@
 }
 
 [data-theme="light"] {
-  --background-color:#f7ecec;
-  --background-color-under: #d4c6cb;
+  --background-color: 	#fafafa;
+  --background-color-under: #e4e5f1;
   --border-color: #b6a9ad;
   --text-color: #000000;
 }

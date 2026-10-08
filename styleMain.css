@@ -38,6 +38,7 @@ html {
 .mainCover .bottomElement {
     display: table-cell;
     text-align: center;
+    font-size: 18pt;
     vertical-align: bottom;
 }
 

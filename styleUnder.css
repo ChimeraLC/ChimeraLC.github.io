@@ -69,6 +69,14 @@
     margin-bottom: -10px;
 }
 
+.underContent hr {
+  border: 0;        
+  height: 3px;    
+  background-color:var(--text-color);
+  margin: 20px 0;        
+  width: 80%;
+}
+
 .underContent .maxum {
     padding-left: 60px;
     padding-right: 60px;
